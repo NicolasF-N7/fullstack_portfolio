@@ -25,3 +25,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.rotate-top-left {
+  transform-origin: top left;
+}
+.width-as-margin {
+    margin-top: 100%; /* Adjust the percentage based on your specific needs */
+  }
