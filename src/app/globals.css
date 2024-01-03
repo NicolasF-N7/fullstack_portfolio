@@ -29,6 +29,20 @@ body {
 .rotate-top-left {
   transform-origin: top left;
 }
-.width-as-margin {
-    margin-top: 100%; /* Adjust the percentage based on your specific needs */
+
+.services-margin {
+    margin-top: 6em; /* Adjust the percentage based on your specific needs */
   }
+.portfolio-margin {
+    margin-top: 6.1em; /* Adjust the percentage based on your specific needs */
+  }
+.about-margin {
+    margin-top: 8.7em; /* Adjust the percentage based on your specific needs */
+  }
+.contact-margin {
+    margin-top: 5.9em; /* Adjust the percentage based on your specific needs */
+  }
+
+.flat-container{
+  height:0px;
+}

@@ -19,3 +19,4 @@ export default Comp;`
 
 ## Add components to the layout in each page
 1. In app/layout.tsx, add the <Navigation /> component just before {children}
+
