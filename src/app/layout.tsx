@@ -23,7 +23,9 @@ export default function RootLayout({
 
         <div className="flex">
           <Navigation />
-          {children}
+          <div className="flex-1 bg-sandSecondary">
+            {children}
+          </div>
         </div>
       </body>
     </html>

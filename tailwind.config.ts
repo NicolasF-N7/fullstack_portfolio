@@ -15,6 +15,7 @@ const config: Config = {
       'sandSecondary': '#FCE09B',
       'redAccent': '#B5CB99',
       'brownTertiary': '#463715',
+      'lightBrown': '#816729',
     },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
