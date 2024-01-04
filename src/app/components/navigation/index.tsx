@@ -12,8 +12,9 @@ const Navigation = () => {
 
   return (
       <>
-        <DesktopNav toggle={toggleMobileNav}/>
-        <MobileNav isOpened={isMobileNavOpened} toggle={toggleMobileNav}/>
+        <nav>
+          <DesktopNav toggle={toggleMobileNav}/>
+        </nav>
       </>
   );
 };

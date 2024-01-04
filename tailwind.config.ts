@@ -7,7 +7,8 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors: {
+    extend: {
+      colors: {
       transparent: 'transparent',
       current: 'currentColor',
       'bluePrimary': '#60C0B5',
@@ -15,7 +16,6 @@ const config: Config = {
       'redAccent': '#B5CB99',
       'brownTertiary': '#463715',
     },
-    extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

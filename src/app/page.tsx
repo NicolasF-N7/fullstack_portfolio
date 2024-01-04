@@ -8,8 +8,8 @@ function Header({ title }) {
 export default function Home() {
   return (
     <main className="">
-      <div className="">
-       
+      <div className="bg-sandSecondary">
+       salut
       </div>
       
     </main>
