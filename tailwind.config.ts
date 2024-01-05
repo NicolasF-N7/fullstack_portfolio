@@ -8,12 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      transitionProperty: {
+        'max-height': 'max-height',
+      },
       colors: {
       transparent: 'transparent',
       current: 'currentColor',
       'bluePrimary': '#60C0B5',
       'sandSecondary': '#FCE09B',
-      'redAccent': '#B5CB99',
+      'redAccent': '#B2533E',
       'brownTertiary': '#463715',
       'lightBrown': '#816729',
     },

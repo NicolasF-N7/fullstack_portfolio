@@ -5,11 +5,11 @@ import ExpandableSection from '../components/expandableSection'
 
 export default function Services() {
   return (
-    <div className="ml-14 text-black">
+    <div className="text-black">
       {/*______Services title______*/}
- 		  <h1 className="text-center font-bold text-xl mt-4">Mes Services</h1>
+ 		  <h1 className="text-center font-bold text-xl mt-8">Mes Services</h1>
       
-      <div className="">
+      <div className="ml-10 md:ml-14">
         {/*______Container Text & Picture______*/}
         <div className="flex flex-col md:flex-row">
           {/*______Picture______*/}
