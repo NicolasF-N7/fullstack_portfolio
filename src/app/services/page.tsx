@@ -1,29 +1,30 @@
+"use client"
 import React from "react";
 import Image from "next/image";
+import ExpandableSection from '../components/expandableSection'
 
-export default function Services() { 
+export default function Services() {
   return (
-    <div>
-      {/* TITLE */}
-      <div className="ml-14 text-black">
-   		  <h1 className="text-center font-bold text-xl mt-4">Mes Services</h1>
-        
-        <div className="inline">
-
+    <div className="ml-14 text-black">
+      {/*______Services title______*/}
+ 		  <h1 className="text-center font-bold text-xl mt-4">Mes Services</h1>
+      
+      <div className="">
+        {/*______Container Text & Picture______*/}
         <div className="flex flex-col md:flex-row">
-          {/* Picture */}
-          <div className="order-1 md:order-2 m-8 md:ml-0 mb-0 w/4">
+          {/*______Picture______*/}
+          <div className="order-1 md:order-2 m-8 md:ml-0 mb-0">
             <Image
                 src="/images/nfoin_StationF_centered_compressed.jpg"
                 alt="Portrait of Nicolas Foin"
-                width="1920"
-                height="1080"
-                layout="responsive"
+                width="720"
+                height="480"
                 className=""
               />
           </div>
+          {/*______Picture______*/}
 
-          {/* Text */}
+          {/*______Text______*/}
           <div className="order-2 md:order-1 m-8">
             {/* Pitch*/}
             <div className="p-8 bg-lightBrown">
@@ -44,21 +45,20 @@ export default function Services() {
                 <p>Des sites vitrines, ecommerce, et MVP / prototype d’applications web.</p>
                 <br/>
               </div>
-
-              </div>
+            </div>
           </div>
+          {/*______Text______*/}
+
         </div>
-
-
-        {/* Presentation */}
-        <div className="">
-          
-          </div>
-        </div>
-
+        {/*______Container Text & Picture______*/}
       </div>
 
-    </div>
+      <ExpandableSection title="Site vitrine">
+        {/* Content for Section 1 */}
+        <p>This is the content for Section 1.</p>
+      </ExpandableSection>
 
+    {/*______Global container______*/}
+    </div>
   );
 }
