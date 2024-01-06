@@ -55,7 +55,19 @@ export default function Services() {
 
       <ExpandableSection title="Site vitrine">
         {/* Content for Section 1 */}
-        <p>This is the content for Section 1.</p>
+        <p>Je crée des sites vitrine avec le CMS Wordpress pour gérer le stockage de données et le backend. Selon la personnalisation souhaité et le budget, je peux réaliser la partie interface utilisateur avec React, ou bien avec l’editeur de thème Elementor.
+Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi même sur Figma.</p>
+      </ExpandableSection>
+
+      <ExpandableSection title="E-commerce">
+        {/* Content for Section 1 */}
+        <p>J’utilise Shopify pour créer les sites ecommerces. Selon votre budget, je peux créer l’interface utilisateur totalement personalisée en React, ou bien utiliser l’editeur de thème pour un site plus rapidement fait.
+Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi même sur Figma.</p>
+      </ExpandableSection>
+
+      <ExpandableSection title="Application web">
+        {/* Content for Section 1 */}
+        <p>Pour la création de SaaS et autres applications web nécessitant des fonctionalités uniques, j’utilise React pour faire l’interface utilisateur, et NodeJS pour créer un backend léger et rapide.</p>
       </ExpandableSection>
 
     {/*______Global container______*/}
