@@ -19,6 +19,7 @@ const config: Config = {
       'redAccent': '#B2533E',
       'brownTertiary': '#463715',
       'lightBrown': '#816729',
+      'expandedSection': '#186F6531'
     },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
