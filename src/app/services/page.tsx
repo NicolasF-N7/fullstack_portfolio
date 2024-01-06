@@ -2,6 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import ExpandableSection from '../components/expandableSection'
+import Carousel from '../components/carousel'
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function Services() {
   return (
@@ -53,6 +55,7 @@ export default function Services() {
         {/*______Container Text & Picture______*/}
       </div>
 
+      {/*______Services______*/}
       <ExpandableSection title="Site vitrine">
         {/* Content for Section 1 */}
         <p>Je crée des sites vitrine avec le CMS Wordpress pour gérer le stockage de données et le backend. Selon la personnalisation souhaité et le budget, je peux réaliser la partie interface utilisateur avec React, ou bien avec l’editeur de thème Elementor.
@@ -69,6 +72,31 @@ Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le pr
         {/* Content for Section 1 */}
         <p>Pour la création de SaaS et autres applications web nécessitant des fonctionalités uniques, j’utilise React pour faire l’interface utilisateur, et NodeJS pour créer un backend léger et rapide.</p>
       </ExpandableSection>
+      {/*______Services______*/}
+
+      {/*vvvvv Projects Carousel vvvvv*/}
+      <div className="md:order-1 m-8">
+        <div className="p-8 bg-lightBrown">
+          <h3 className="font-bold text-xl">Mes réalisations</h3>
+        </div>
+
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={3}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}>
+          <SwiperSlide>Slide 1</SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+          <SwiperSlide>Slide 3</SwiperSlide>
+          <SwiperSlide>Slide 4</SwiperSlide>
+
+        </Swiper>
+
+      </div>
+      
+      {/*^^^^^Projects Carousel^^^^^*/}
+
+
 
     {/*______Global container______*/}
     </div>
