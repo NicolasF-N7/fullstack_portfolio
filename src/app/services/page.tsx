@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import Link from 'next/link';
 import Image from "next/image";
 import ExpandableSection from '@/app/components/expandableSection'
 import { portfolio_proj_data } from '@/app/portfolio/projects_data'
@@ -81,14 +82,13 @@ Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le pr
       </ExpandableSection>
       {/*______Services______*/}
 
-      {/*vvvvv Projects Carousel vvvvv*/}
+      {/*vvvvv Projects Carousel section vvvvv*/}
       <div className="md:order-1 m-8 mx-14">
         <div className="p-8 mx-auto bg-lightBrown swiper-container">
           <h3 className="font-bold text-xl text-center pb-8">Mes réalisations</h3>
           
           <Swiper
-            className=""
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            modules={[Navigation, Pagination, Scrollbar, A11y, Thumbs]}
             spaceBetween={50}
             slidesPerView={3}
             navigation
@@ -112,12 +112,20 @@ Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le pr
               </SwiperSlide>
             ))}
           </Swiper>
-          
-        </div>
 
+          <div className="flex justify-center mt-4 ">
+            <Link className="p-4 w-1/4 bg-redAccent border-sandSecondary border-2" href="/portfolio">
+              <div className=" text-center text-sandSecondary font-bold">
+                <p>Détails</p>
+              </div>
+            </Link>
+          </div>
+
+        </div>
       </div>
-      
-      {/*^^^^^Projects Carousel^^^^^*/}
+      {/*^^^^^Projects Carousel section ^^^^^*/}
+
+
 
 
 

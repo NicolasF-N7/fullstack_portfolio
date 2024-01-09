@@ -16,7 +16,7 @@ const config: Config = {
       current: 'currentColor',
       'bluePrimary': '#60C0B5',
       'sandSecondary': '#FCE09B',
-      'redAccent': '#B2533E',
+      'redAccent': '#e8360e',
       'brownTertiary': '#463715',
       'lightBrown': '#816729',
       'expandedSection': '#186F6531'
