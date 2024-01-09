@@ -1,9 +1,16 @@
 "use client"
 import React from "react";
 import Image from "next/image";
-import ExpandableSection from '../components/expandableSection'
-import Carousel from '../components/carousel'
+import ExpandableSection from '@/app/components/expandableSection'
+import { portfolio_proj_data } from '@/app/portfolio/projects_data'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y, Thumbs } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 
 export default function Services() {
   return (
@@ -75,22 +82,38 @@ Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le pr
       {/*______Services______*/}
 
       {/*vvvvv Projects Carousel vvvvv*/}
-      <div className="md:order-1 m-8">
-        <div className="p-8 bg-lightBrown">
-          <h3 className="font-bold text-xl">Mes réalisations</h3>
+      <div className="md:order-1 m-8 mx-14">
+        <div className="p-8 mx-auto bg-lightBrown swiper-container">
+          <h3 className="font-bold text-xl text-center pb-8">Mes réalisations</h3>
+          
+          <Swiper
+            className=""
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={50}
+            slidesPerView={3}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log('slide change')}>
+
+            {portfolio_proj_data.map((project, index) => (
+              <SwiperSlide className="swiper-slide" key={index}>
+                <div className="text-center">
+                  <Image
+                    src={project.screenshot_src}
+                    alt={project.screenshot_alt}/>
+
+                  <div className="mt-4 p-2 bg-sandSecondary w-100">
+                    <p className="font-bold py-2">{project.title}</p>
+                    <p className="py-2">{project.gist}</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          
         </div>
-
-        <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}>
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-
-        </Swiper>
 
       </div>
       
