@@ -26,7 +26,7 @@ const Portfolio = ({isOpen, toggle}) => {
 	        <div className="ml-10 md:ml-14">
 	        	<div className="ml-1 portfolio-swiper-container">
 		        	<Swiper
-		        		className=""
+		        		className="h-full"
 			            modules={[EffectCreative, FreeMode, Pagination, A11y, Mousewheel]}
 			            spaceBetween={50}
 			            centeredSlides={true}
@@ -34,7 +34,7 @@ const Portfolio = ({isOpen, toggle}) => {
 			            onSwiper={handleSwiperInit}
 			            slidesPerView={1}
 			            mousewheel={true}
-			            freeMode={true}
+			            freeMode={false}
 			            pagination={{ clickable: true }}
 			            effect={'creative'}
 				        creativeEffect={{
