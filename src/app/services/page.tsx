@@ -5,9 +5,10 @@ import Image from "next/image";
 import ExpandableSection from '@/app/components/expandableSection'
 import { portfolio_proj_data } from '@/app/portfolio/projects_data'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, Thumbs } from 'swiper/modules';
+import { FreeMode, Navigation, Pagination, A11y, Mousewheel } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/mousewheel';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
@@ -29,7 +30,7 @@ export default function Services() {
                 alt="Portrait of Nicolas Foin"
                 width="720"
                 height="480"
-                className=""
+                className="rounded"
               />
           </div>
           {/*______Picture______*/}
@@ -37,7 +38,7 @@ export default function Services() {
           {/*______Text______*/}
           <div className="order-2 md:order-1 m-8">
             {/* Pitch*/}
-            <div className="p-8 bg-lightBrown">
+            <div className="rounded p-8 bg-lightBrown">
               <div>
                 <h3 className="font-bold text-xl">Je suis</h3>
                 <p>Nicolas Foin, Freelance en développemment web fullstack spécialisé en React.</p>
@@ -83,17 +84,26 @@ Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le pr
       {/*______Services______*/}
 
       {/*vvvvv Projects Carousel section vvvvv*/}
-      <div className="md:order-1 m-8 mx-14">
-        <div className="p-8 mx-auto bg-lightBrown swiper-container">
+      <div className="m-8 mx-14">
+        <div className="rounded p-8 bg-lightBrown swiper-container">
           <h3 className="font-bold text-xl text-center pb-8">Mes réalisations</h3>
           
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y, Thumbs]}
-            spaceBetween={50}
-            slidesPerView={3}
+            modules={[FreeMode, Navigation, Pagination, A11y, Mousewheel]}
+            spaceBetween={"25em"}
+            breakpoints={{
+              768: {
+                slidesPerView: 3,
+              },
+              0: {
+                slidesPerView: 1,
+              },
+            }}
+            mousewheel={true}
+            loop={true}
+            freeMode={true}
             navigation
             pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}>
 
@@ -101,10 +111,11 @@ Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le pr
               <SwiperSlide className="swiper-slide" key={index}>
                 <div className="text-center">
                   <Image
+                    className="rounded"
                     src={project.screenshot_src}
                     alt={project.screenshot_alt}/>
 
-                  <div className="mt-4 p-2 bg-sandSecondary w-100">
+                  <div className="rounded mt-4 p-2 bg-sandSecondary w-100">
                     <p className="font-bold py-2">{project.title}</p>
                     <p className="py-2">{project.gist}</p>
                   </div>
