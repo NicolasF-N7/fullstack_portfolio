@@ -6,7 +6,7 @@ import Image from "next/image";
 import { portfolio_proj_data } from '@/app/portfolio/projects_data'
 import ExpandableSection from '@/app/components/expandableSection'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { FreeMode, Pagination, A11y, Mousewheel, EffectCreative } from 'swiper/modules';
+import SwiperCore, { FreeMode, Navigation, Pagination, A11y, Mousewheel, EffectCreative } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/mousewheel';
@@ -22,19 +22,18 @@ const Portfolio = ({isOpen, toggle}) => {
 
   return (
       <>
-      	<div className="">
+      	<div className="mb-6">
 	        <div className="ml-10 md:ml-14">
-	        	<div className="ml-1 portfolio-swiper-container">
+	        	<div className="m-4 mr-0 portfolio-swiper-container">
 		        	<Swiper
-		        		className="h-full"
+		        		className="portfolio-swiper"
 			            modules={[EffectCreative, FreeMode, Pagination, A11y, Mousewheel]}
 			            spaceBetween={50}
-			            centeredSlides={true}
 			            grabCursor={true}
 			            onSwiper={handleSwiperInit}
 			            slidesPerView={1}
 			            mousewheel={true}
-			            freeMode={false}
+			            freeMode={true}
 			            pagination={{ clickable: true }}
 			            effect={'creative'}
 				        creativeEffect={{
@@ -57,17 +56,48 @@ const Portfolio = ({isOpen, toggle}) => {
 				        }}>
 
 			            {portfolio_proj_data.map((project, index) => (
-			              <SwiperSlide className="m-10 bg-bluePrimary rounded" key={index}>
-			                <div className="flex-col p-8 text-center ">
+			              <SwiperSlide className="bg-bluePrimary rounded portfolio-slides" key={index}>
+			                <div className="flex-col p-8 text-center h-full">
 			                	<h2 className="text-black font-bold text-xl mb-4">{project.title}</h2>
 
 			                	<div className="flex">
-					                <Image
-					                  	className="w-1/2"
-					                    src={project.screenshot_src}
-					                    alt={project.screenshot_alt}/>
+			                		<div className="flex-1 my-auto swiper-container">
+						               
+						                <Swiper
+							        		className="portfolio-swiper"
+								            modules={[FreeMode, Navigation, A11y]}
+								            spaceBetween={50}
+								            grabCursor={false}
+								            slidesPerView={1}
+								            freeMode={false}
+								            navigation={{
+										        nextEl: '.swiper-button-next',
+										        prevEl: '.swiper-button-prev'
+										      }}
+								            pagination={{ clickable: true }}
+								            effect={'fade'}>
+								            <SwiperSlide className="bg-bluePrimary rounded portfolio-slides" key={index}>
+								            	<Image
+							                  	className="object-contain"
+							                    src={project.screenshot_src}
+							                    alt={project.screenshot_alt}/>
+						                    </SwiperSlide>
+						                    <SwiperSlide className="bg-bluePrimary rounded portfolio-slides" key={index}>
+								            	<Image
+							                  	className="object-contain"
+							                    src={project.screenshot_src}
+							                    alt={project.screenshot_alt}/>
+						                    </SwiperSlide>
+						                    <SwiperSlide className="bg-bluePrimary rounded portfolio-slides" key={index}>
+								            	<Image
+							                  	className="object-contain"
+							                    src={project.screenshot_src}
+							                    alt={project.screenshot_alt}/>
+						                    </SwiperSlide>
+						                </Swiper>
+						            </div>
 
-					                <div className="mt-4 px-4">
+					                <div className="flex-1 mt-4 px-4">
 					                    <p className="py-2 bg-expandedSection">{project.gist}</p>
 					                    <br/>
 					                    <br/>
@@ -80,7 +110,7 @@ const Portfolio = ({isOpen, toggle}) => {
 			                </div>
 			              </SwiperSlide>
 			            ))}
-			            <SwiperSlide className="m-10 swiper-slide">
+			            <SwiperSlide className="swiper-slide">
 			            </SwiperSlide>
 			        </Swiper>
 	        	</div>

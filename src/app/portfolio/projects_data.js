@@ -1,5 +1,5 @@
-import hestauScreenshot from '/public/images/portfolio/hestau.png'
-import mynftBridgeScreenshot from '/public/images/portfolio/MyNFT-Bridge-square.png'
+import hestauScreenshot from '/public/images/portfolio/hestau-720.png'
+import mynftBridgeScreenshot from '/public/images/portfolio/MyNFT-Bridge-720.png'
 
 export const portfolio_proj_data = [
 	{ 
