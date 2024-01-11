@@ -57,7 +57,7 @@ const Portfolio = ({isOpen, toggle}) => {
 
 			            {portfolio_proj_data.map((project, index) => (
 			              <SwiperSlide className="bg-bluePrimary rounded portfolio-slides" key={index}>
-			                <div className="flex-col p-8 text-center h-full">
+			                <div className="flex-col p-8 text-center">
 			                	<h2 className="text-black font-bold text-xl mb-4">{project.title}</h2>
 
 			                	<div className="flex">
