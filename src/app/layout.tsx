@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
 
-        <div className="flex">
+        <div className="min-h-screen flex">
           <Navigation />
           <div className="flex-1 bg-sandSecondary">
             {children}
