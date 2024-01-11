@@ -29,7 +29,7 @@ const DesktopNavigation = ({toggle}) => {
 
           <div className="block about-margin flat-vertic">
             <div className="flat-container flat-horiz rotate-top-left rotate-[-90deg]">
-              <Link href="/services">
+              <Link href="/about">
                 <div className="inline-block text-black font-bold p-4 py-2 md:py-4 bg-bluePrimary">
                     <p className="">Nicolas</p>
                 </div>
@@ -39,7 +39,7 @@ const DesktopNavigation = ({toggle}) => {
 
           <div className="block contact-margin flat-vertic">
             <div className="flat-container flat-horiz rotate-top-left rotate-[-90deg]">
-              <Link href="/services">
+              <Link href="/contact">
                 <div className="inline-block text-black font-bold p-4 py-2 md:py-4 bg-bluePrimary">
                   <p>Contact</p>
                 </div>
