@@ -8,6 +8,16 @@ import mynftBridgeProgressScreenshot from '/public/images/portfolio/bridge-progr
 import mynftBridgeInputScreenshot from '/public/images/portfolio/mynft-bridge-input-720.png'
 import mynftBridgeBreadcrumbScreenshot from '/public/images/portfolio/mynft-bridge-breadcrumb-720.png'
 
+/* 
+Structure of portfolio_proj_data:
+List of project
+Project = {title, screenshots, gist}
+
+Gist is what's displayed in the /services page, in the carousel with all projects, to describe them
+
+*/
+
+
 export const portfolio_proj_data = [
 	{ 
 		title: "MyNFT - Bridge between several blockchains",

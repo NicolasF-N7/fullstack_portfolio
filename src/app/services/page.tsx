@@ -3,6 +3,7 @@ import React from "react";
 import Link from 'next/link';
 import Image from "next/image";
 import ExpandableSection from '@/app/components/expandableSection'
+import { technologies_logo } from '@/app/services/techno-logo'
 import { portfolio_proj_data } from '@/app/portfolio/projects_data'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Pagination, A11y, Mousewheel } from 'swiper/modules';
@@ -68,13 +69,13 @@ export default function Services() {
       <ExpandableSection title="Site vitrine">
         {/* Content for Section 1 */}
         <p>Je crée des sites vitrine avec le CMS Wordpress pour gérer le stockage de données et le backend. Selon la personnalisation souhaité et le budget, je peux réaliser la partie interface utilisateur avec React, ou bien avec l’editeur de thème Elementor.
-Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi même sur Figma.</p>
+          Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi même sur Figma.</p>
       </ExpandableSection>
 
       <ExpandableSection title="E-commerce">
         {/* Content for Section 1 */}
         <p>J’utilise Shopify pour créer les sites ecommerces. Selon votre budget, je peux créer l’interface utilisateur totalement personalisée en React, ou bien utiliser l’editeur de thème pour un site plus rapidement fait.
-Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi même sur Figma.</p>
+          Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi même sur Figma.</p>
       </ExpandableSection>
 
       <ExpandableSection title="Application web">
@@ -84,10 +85,10 @@ Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le pr
       {/*______Services______*/}
 
       {/*vvvvv Projects Carousel section vvvvv*/}
-      <div className="m-8 mx-14">
-        <div className="rounded p-8 bg-lightBrown swiper-container">
-          <h3 className="font-bold text-xl text-center pb-8">Mes réalisations</h3>
-          
+      <div className="m-8 mx-0 p-8 bg-lightBrown">
+        <h3 className="font-bold text-xl text-center pb-8">Mes réalisations</h3>
+
+        <div className="swiper-container mx-auto">
           <Swiper
             modules={[FreeMode, Navigation, Pagination, A11y, Mousewheel]}
             spaceBetween={"25em"}
@@ -110,7 +111,12 @@ Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le pr
             {portfolio_proj_data.map((project, index) => (
               <SwiperSlide className="swiper-slide" key={index}>
                 <div className="text-center">
-              
+                  <div className="rounded bg-white">
+                    <Image
+                      className="rounded w-full"
+                      src={project.screenshots[0].src}
+                      alt={project.screenshots[0].alt}/>
+                  </div>
 
                   <div className="rounded mt-4 p-2 bg-sandSecondary w-100">
                     <p className="font-bold py-2">{project.title}</p>
@@ -120,21 +126,45 @@ Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le pr
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
 
-          <div className="flex justify-center mt-4 ">
-            <Link className="p-4 w-1/4 bg-redAccent border-sandSecondary border-2" href="/portfolio">
-              <div className=" text-center text-sandSecondary font-bold">
-                <p>Détails</p>
-              </div>
-            </Link>
-          </div>
-
+        <div className="flex justify-center mt-4 ">
+          <Link className="p-4 w-1/4 bg-redAccent border-sandSecondary border-2" href="/portfolio">
+            <div className=" text-center text-sandSecondary font-bold">
+              <p>Détails</p>
+            </div>
+          </Link>
         </div>
       </div>
       {/*^^^^^Projects Carousel section ^^^^^*/}
 
+      {/*vvvvv Tech skills vvvvv*/}
+      <div className="m-16 mx-0 bg-bluePrimary">
+        <div className="flex-col p-4">
+          <h2 className="text-xl font-bold text-center">Les technologies que je maitrise</h2>
 
+          <div className="flex justify-center">
+            {technologies_logo.map((techno, index) => (
+              <div className="flex-col m-4 items-start">
+                <div className="mt-auto rounded-tl-lg rounded-br-lg bg-white">
+                  <Image
+                    className="flex-none align-self-end p-2"
+                    height={128}
+                    width={128}
+                    src={techno.src}
+                    alt={techno.alt}/>
+                </div>
 
+                <div className="m-4">
+                  <p>{techno.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>  
+      </div>
+
+      {/*^^^^^ Tech skills ^^^^^*/}
 
 
     {/*______Global container______*/}
