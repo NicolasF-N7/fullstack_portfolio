@@ -15,10 +15,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/effect-creative';
 
-import mynftBridgeScreenshot from '/public/images/portfolio/MyNFT-Bridge-720.png'
-import mynftBridgeProgressScreenshot from '/public/images/portfolio/bridge-progress-720.png'
-
-
 const Portfolio = ({isOpen, toggle}) => {
 
   const handleSwiperInit = (swiper) => {
@@ -71,7 +67,7 @@ const Portfolio = ({isOpen, toggle}) => {
 			        </Swiper>
 	        	</div>
 	        </div>
-		</div>
+				</div>
       </>
   );
 };

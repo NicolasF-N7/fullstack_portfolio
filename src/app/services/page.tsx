@@ -110,10 +110,7 @@ Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le pr
             {portfolio_proj_data.map((project, index) => (
               <SwiperSlide className="swiper-slide" key={index}>
                 <div className="text-center">
-                  <Image
-                    className="rounded"
-                    src={project.screenshot_src}
-                    alt={project.screenshot_alt}/>
+              
 
                   <div className="rounded mt-4 p-2 bg-sandSecondary w-100">
                     <p className="font-bold py-2">{project.title}</p>
