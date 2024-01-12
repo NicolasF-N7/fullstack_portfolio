@@ -143,21 +143,25 @@ export default function Services() {
         <div className="flex-col p-4">
           <h2 className="text-xl font-bold text-center">Les technologies que je maitrise</h2>
 
-          <div className="flex justify-center">
+          <div className={`grid grid-cols-${technologies_logo.length} gap-4`}>
+            {/* Logos*/}
             {technologies_logo.map((techno, index) => (
-              <div className="flex-col m-4 items-start">
-                <div className="mt-auto rounded-tl-lg rounded-br-lg bg-white">
+              <div className="m-4 self-end">
+                <div className="rounded-tl-lg rounded-br-lg bg-white">
                   <Image
-                    className="flex-none align-self-end p-2"
+                    className="p-2 mx-auto"
                     height={128}
                     width={128}
                     src={techno.src}
                     alt={techno.alt}/>
                 </div>
+              </div>
+            ))}
 
-                <div className="m-4">
-                  <p>{techno.description}</p>
-                </div>
+            {/* Descriptions*/}
+            {technologies_logo.map((techno, index) => (
+              <div className="m-1">
+                <p>{techno.description}</p>
               </div>
             ))}
           </div>
