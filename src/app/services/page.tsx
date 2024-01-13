@@ -118,7 +118,7 @@ export default function Services() {
                       alt={project.screenshots[0].alt}/>
                   </div>
 
-                  <div className="rounded mt-4 p-2 bg-sandSecondary w-100">
+                  <div className="rounded mt-4 p-2 bg-white w-100">
                     <p className="font-bold py-2">{project.title}</p>
                     <p className="py-2">{project.gist}</p>
                   </div>
@@ -145,7 +145,7 @@ export default function Services() {
 
           <div className="swiper-container mx-auto">
             <Swiper
-              className="mt-8 h-[23em]"
+              className="mt-8 h-[24em]"
               modules={[FreeMode, Navigation, Pagination, Grid, A11y, Mousewheel]}
               spaceBetween={30}
               grid={{
@@ -169,13 +169,16 @@ export default function Services() {
               {/* Slide */}
               {technologies_logo.map((techno, index) => (
                 <SwiperSlide className="" key={index}>
-                  <div className="flex mb-8 rounded-tl-lg rounded-br-lg bg-white">
-                    <Image
-                      className="p-2 mx-auto align-end"
-                      height={128}
-                      width={128}
-                      src={techno.src}
-                      alt={techno.alt}/>
+
+                  <div className="flex flex-col h-full">
+                    <div className="flex items-center justify-centermt-8 rounded-tl-lg rounded-br-lg bg-white h-full overflow-hidden">
+                      <Image
+                        className="p-2 mx-auto"
+                        height={128}
+                        width={128}
+                        src={techno.src}
+                        alt={techno.alt}/>
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}
