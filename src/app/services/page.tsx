@@ -6,10 +6,11 @@ import ExpandableSection from '@/app/components/expandableSection'
 import { technologies_logo } from '@/app/services/techno-logo'
 import { portfolio_proj_data } from '@/app/portfolio/projects_data'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Navigation, Pagination, A11y, Mousewheel } from 'swiper/modules';
+import { FreeMode, Navigation, Pagination, Grid, A11y, Mousewheel } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/mousewheel';
+import 'swiper/css/grid';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
@@ -144,9 +145,13 @@ export default function Services() {
 
           <div className="swiper-container mx-auto">
             <Swiper
-              className="mt-8"
-              modules={[FreeMode, Navigation, Pagination, A11y, Mousewheel]}
-              spaceBetween={"3%"}
+              className="mt-8 h-[23em]"
+              modules={[FreeMode, Navigation, Pagination, Grid, A11y, Mousewheel]}
+              spaceBetween={30}
+              grid={{
+                rows: 2,
+                fill: 'columns'
+              }}
               breakpoints={{
                 768: {
                   slidesPerView: 3,
@@ -156,27 +161,29 @@ export default function Services() {
                 },
               }}
               mousewheel={true}
-              loop={true}
+              loop={false}
               freeMode={true}
               navigation
               pagination={{ clickable: true }}>
 
               {/* Slide */}
               {technologies_logo.map((techno, index) => (
-                <SwiperSlide className="technologies-swiper-slide" key={index}>
-                  <div className="flex flex-col justify-end h-full">
-                    <div className="mb-8 rounded-tl-lg rounded-br-lg bg-white">
-                      <Image
-                        className="p-2 mx-auto"
-                        height={128}
-                        width={128}
-                        src={techno.src}
-                        alt={techno.alt}/>
-                    </div>
+                <SwiperSlide className="" key={index}>
+                  <div className="flex mb-8 rounded-tl-lg rounded-br-lg bg-white">
+                    <Image
+                      className="p-2 mx-auto align-end"
+                      height={128}
+                      width={128}
+                      src={techno.src}
+                      alt={techno.alt}/>
+                  </div>
+                </SwiperSlide>
+              ))}
 
-                    <div className="">
-                      <p>{techno.description}</p>
-                    </div>
+              {technologies_logo.map((techno, index) => (
+                <SwiperSlide className="">
+                  <div className="">
+                    <p>{techno.description}</p>
                   </div>
                 </SwiperSlide>
               ))}
