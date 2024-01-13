@@ -138,6 +138,7 @@ export default function Services() {
       </div>
       {/*^^^^^Projects Carousel section ^^^^^*/}
 
+
       {/*vvvvv Tech skills vvvvv*/}
       <div className="m-16 mx-0 bg-bluePrimary">
         <div className="flex-col p-4">
@@ -171,7 +172,7 @@ export default function Services() {
                 <SwiperSlide className="" key={index}>
 
                   <div className="flex flex-col h-full">
-                    <div className="flex items-center justify-centermt-8 rounded-tl-lg rounded-br-lg bg-white h-full overflow-hidden">
+                    <div className="flex items-center justify-center mt-8 rounded-tl-lg rounded-br-lg bg-white h-full overflow-hidden">
                       <Image
                         className="p-2 mx-auto"
                         height={128}
@@ -198,6 +199,30 @@ export default function Services() {
       </div>
 
       {/*^^^^^ Tech skills ^^^^^*/}
+
+
+      {/*vvvvv Contact vvvvv*/}
+      <div className="m-8 mx-0 bg-lightBrown min-h-[10em] flex flex-col justify-center">
+        <div className="flex items-center justify-center">
+          <p className="mr-14 font-bold text-xl text-black">Discutons de vos besoins</p>
+
+          <div className="ml-14 flex justify-center">
+            <Link className="p-4 bg-redAccent border-sandSecondary border-2" href="/contact">
+              <div className="text-center text-sandSecondary font-bold">
+                <p>Contactez moi</p>
+              </div>
+            </Link>
+          </div>
+
+        </div>
+
+      </div>
+      {/*^^^^^ Contact ^^^^^*/}
+
+
+      {/*vvvvv Recommendations vvvvv*/}
+
+      {/*^^^^^ Recommendations ^^^^^*/}
 
 
     {/*______Global container______*/}
