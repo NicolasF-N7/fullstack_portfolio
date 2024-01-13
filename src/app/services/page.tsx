@@ -22,7 +22,7 @@ export default function Services() {
  		  <h1 className="text-center font-bold text-xl mt-8">Mes Services</h1>
       
       <div className="ml-10 md:ml-14">
-        {/*______Container Text & Picture______*/}
+        {/*vvvvvv Container Text & Picture vvvvvvvv*/}
         <div className="flex flex-col md:flex-row">
           {/*______Picture______*/}
           <div className="order-1 md:order-2 m-8 md:ml-0 mb-0">
@@ -60,9 +60,8 @@ export default function Services() {
             </div>
           </div>
           {/*______Text______*/}
-
         </div>
-        {/*______Container Text & Picture______*/}
+        {/*^^^^^^^ Container Text & Picture ^^^^^^^*/}
       </div>
 
       {/*______Services______*/}
@@ -143,28 +142,48 @@ export default function Services() {
         <div className="flex-col p-4">
           <h2 className="text-xl font-bold text-center">Les technologies que je maitrise</h2>
 
-          <div className={`grid grid-cols-${technologies_logo.length} gap-4`}>
-            {/* Logos*/}
-            {technologies_logo.map((techno, index) => (
-              <div className="m-4 self-end">
-                <div className="rounded-tl-lg rounded-br-lg bg-white">
-                  <Image
-                    className="p-2 mx-auto"
-                    height={128}
-                    width={128}
-                    src={techno.src}
-                    alt={techno.alt}/>
-                </div>
-              </div>
-            ))}
+          <div className="swiper-container mx-auto">
+            <Swiper
+              modules={[FreeMode, Navigation, Pagination, A11y, Mousewheel]}
+              spaceBetween={"3%"}
+              autoHeight={true}
+              breakpoints={{
+                768: {
+                  slidesPerView: 3,
+                },
+                0: {
+                  slidesPerView: 1,
+                },
+              }}
+              mousewheel={true}
+              loop={true}
+              freeMode={true}
+              navigation
+              pagination={{ clickable: true }}>
 
-            {/* Descriptions*/}
-            {technologies_logo.map((techno, index) => (
-              <div className="m-1">
-                <p>{techno.description}</p>
-              </div>
-            ))}
+              {/* Slide */}
+              {technologies_logo.map((techno, index) => (
+                <SwiperSlide className="swiper-slide" key={index}>
+                  <div className="mt-8">
+                    <div className="rounded-tl-lg rounded-br-lg bg-white">
+                      <Image
+                        className="p-2 mx-auto"
+                        height={128}
+                        width={128}
+                        src={techno.src}
+                        alt={techno.alt}/>
+                    </div>
+
+                    <div className="">
+                      <p>{techno.description}</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+
+            </Swiper>
           </div>
+
         </div>  
       </div>
 
