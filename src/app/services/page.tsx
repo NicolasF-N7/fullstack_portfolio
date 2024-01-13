@@ -144,9 +144,9 @@ export default function Services() {
 
           <div className="swiper-container mx-auto">
             <Swiper
+              className="mt-8"
               modules={[FreeMode, Navigation, Pagination, A11y, Mousewheel]}
               spaceBetween={"3%"}
-              autoHeight={true}
               breakpoints={{
                 768: {
                   slidesPerView: 3,
@@ -163,9 +163,9 @@ export default function Services() {
 
               {/* Slide */}
               {technologies_logo.map((techno, index) => (
-                <SwiperSlide className="swiper-slide" key={index}>
-                  <div className="mt-8">
-                    <div className="rounded-tl-lg rounded-br-lg bg-white">
+                <SwiperSlide className="technologies-swiper-slide" key={index}>
+                  <div className="flex flex-col justify-end h-full">
+                    <div className="mb-8 rounded-tl-lg rounded-br-lg bg-white">
                       <Image
                         className="p-2 mx-auto"
                         height={128}
@@ -184,7 +184,7 @@ export default function Services() {
             </Swiper>
           </div>
 
-        </div>  
+        </div>
       </div>
 
       {/*^^^^^ Tech skills ^^^^^*/}
