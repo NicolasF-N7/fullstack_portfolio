@@ -2,9 +2,11 @@
 import React from "react";
 import Link from 'next/link';
 import Image from "next/image";
+import { motion, useAnimation } from 'framer-motion';
 import ExpandableSection from '@/app/components/expandableSection'
 import { technologies_logo } from '@/app/services/techno-logo'
 import { portfolio_proj_data } from '@/app/portfolio/projects_data'
+import { recommendations } from '@/app/services/recommendations'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Pagination, Grid, A11y, Mousewheel } from 'swiper/modules';
 // Import Swiper styles
@@ -141,7 +143,7 @@ export default function Services() {
 
       {/*vvvvv Tech skills vvvvv*/}
       <div className="m-16 mx-0 bg-bluePrimary">
-        <div className="flex-col p-4">
+        <div className="flex-col p-8">
           <h2 className="text-xl font-bold text-center">Les technologies que je maitrise</h2>
 
           <div className="swiper-container mx-auto">
@@ -197,14 +199,13 @@ export default function Services() {
 
         </div>
       </div>
-
       {/*^^^^^ Tech skills ^^^^^*/}
 
 
       {/*vvvvv Contact vvvvv*/}
       <div className="m-8 mx-0 bg-lightBrown min-h-[10em] flex flex-col justify-center">
         <div className="flex items-center justify-center">
-          <p className="mr-14 font-bold text-xl text-black">Discutons de vos besoins</p>
+          <p className="mr-14 font-bold text-xl text-black">Discutons de vos besoins !</p>
 
           <div className="ml-14 flex justify-center">
             <Link className="p-4 bg-redAccent border-sandSecondary border-2" href="/contact">
@@ -215,13 +216,85 @@ export default function Services() {
           </div>
 
         </div>
-
       </div>
       {/*^^^^^ Contact ^^^^^*/}
 
 
       {/*vvvvv Recommendations vvvvv*/}
+      <div className="m-16 mx-0 bg-bluePrimary">
+        <div className="flex-col p-8">
+          <h2 className="text-xl font-bold text-center">J'ai travaillé pour eux</h2>
 
+          <div className="swiper-container mx-auto">
+            <Swiper
+              className="mt-8 h-[24em]"
+              modules={[FreeMode, Navigation, Pagination, Grid, A11y, Mousewheel]}
+              spaceBetween={30}
+              grid={{
+                rows: 2,
+                fill: 'columns'
+              }}
+              breakpoints={{
+                768: {
+                  slidesPerView: 2,
+                },
+                0: {
+                  slidesPerView: 1,
+                },
+              }}
+              mousewheel={true}
+              loop={false}
+              freeMode={false}
+              navigation
+              pagination={{ clickable: true }}>
+
+              {/* Slide */}
+              {recommendations.map((recomm, index) => (
+                <SwiperSlide className="" key={index}>
+
+                  <div className="flex flex-col h-full">
+                    <div className="flex items-center justify-center mt-8 rounded-tl-lg rounded-br-lg bg-expandedSection h-full overflow-hidden">
+                      <motion.img
+                        src={hovered ? '/images/LinkedIn_icon.svg' : recomm.profile_picture_src}
+                        alt={recomm.profile_picture_alt}
+                        className="rounded-full"
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.3 }}
+                      />
+
+
+                      <Image
+                        className="mx-auto rounded-full"
+                        height={128}
+                        width={128}
+                        src={recomm.profile_picture_src}
+                        alt={recomm.profile_picture_alt}/>
+
+                      <Link className="mr-auto mb-4 self-end align-left" target="_blank" href={recomm.linkedIn_profile}>
+                        <Image
+                          height={32}
+                          width={32}
+                          src="/images/LinkedIn_icon.svg"
+                          alt="LinkedIn logo"/>
+                      </Link>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+
+              {recommendations.map((recomm, index) => (
+                <SwiperSlide className="">
+                  <div className="">
+                    <p>{recomm.text}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+
+            </Swiper>
+          </div>
+
+        </div>
+      </div>
       {/*^^^^^ Recommendations ^^^^^*/}
 
 
