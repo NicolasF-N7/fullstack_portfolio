@@ -24,7 +24,7 @@ const ExpandableSection = ({title, children}) => {
 
   return (
       <>
-        <div className="p-8 px-14">
+        <div className="p-8 px-8 sm:px-14">
           
            <motion.div className={`flex-col border-t-2 border-b-2 border-bluePrimary 
               transition-colors duration-200 ease-in-out ${isExpanded ? 'bg-expandedSection' : 'bg-sandSecondary'}`}

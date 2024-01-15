@@ -51,7 +51,7 @@ body {
 }
 .swiper-container{
   height: 100%; 
-  max-height: 100vw;
+  max-height: 100vh;
   min-height: 0;
   max-width: calc(100vw - 8em);
   width: 100%;
@@ -111,4 +111,12 @@ body {
 .slider-image{
   max-height: 60%;
   max-width: 70%;
+}
+
+.swiper-button-next {
+  @apply right-4;
+}
+
+.swiper-button-prev {
+  @apply left-4;
 }

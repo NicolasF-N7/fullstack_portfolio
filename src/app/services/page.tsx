@@ -25,11 +25,11 @@ export default function Services() {
       {/*______Services title______*/}
  		  <h1 className="text-center font-bold text-xl mt-8">Mes Services</h1>
       
-      <div className="ml-10 md:ml-14">
+      <div className="ml-0 sm:ml-14">
         {/*vvvvvv Container Text & Picture vvvvvvvv*/}
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col sm:flex-row">
           {/*______Picture______*/}
-          <div className="order-1 md:order-2 m-8 md:ml-0 mb-0">
+          <div className="order-1 sm:order-2 m-8 ml-16 sm:ml-0 mb-4 sm:mb-0">
             <Image
                 src="/images/nfoin_StationF_centered_compressed.jpg"
                 alt="Portrait of Nicolas Foin"
@@ -41,7 +41,7 @@ export default function Services() {
           {/*______Picture______*/}
 
           {/*______Text______*/}
-          <div className="order-2 md:order-1 m-8">
+          <div className="order-2 sm:order-1 m-8">
             {/* Pitch*/}
             <div className="rounded p-8 bg-lightBrown">
               <div>
@@ -105,7 +105,7 @@ export default function Services() {
             }}
             mousewheel={true}
             loop={true}
-            freeMode={true}
+            freeMode={false}
             navigation
             pagination={{ clickable: true }}
             onSwiper={(swiper) => console.log(swiper)}
@@ -131,9 +131,9 @@ export default function Services() {
           </Swiper>
         </div>
 
-        <div className="flex justify-center mt-4 ">
-          <Link className="p-4 w-1/4 bg-redAccent border-sandSecondary border-2" href="/portfolio">
-            <div className=" text-center text-sandSecondary font-bold">
+        <div className="flex justify-center mt-8">
+          <Link className="p-4 w-1/2 sm:w-1/4 bg-redAccent border-sandSecondary border-2" href="/portfolio">
+            <div className="text-center text-sandSecondary font-bold">
               <p>Détails</p>
             </div>
           </Link>
@@ -205,10 +205,10 @@ export default function Services() {
 
       {/*vvvvv Contact vvvvv*/}
       <div className="m-8 mx-0 bg-lightBrown min-h-[10em] flex flex-col justify-center">
-        <div className="flex items-center justify-center">
-          <p className="mr-14 font-bold text-xl text-black">Discutons de vos besoins !</p>
+        <div className="flex flex-col sm:flex-row items-center justify-between">
+          <p className="sm:ml-[20%] ml-0 font-bold text-xl text-black mb-4 sm:mb-0">Discutons de vos besoins !</p>
 
-          <div className="ml-14 flex justify-center">
+          <div className="sm:mr-[20%] mr-0  flex justify-center">
             <Link className="p-4 bg-redAccent border-sandSecondary border-2" href="/contact">
               <div className="text-center text-sandSecondary font-bold">
                 <p>Contactez moi</p>
