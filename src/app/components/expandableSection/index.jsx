@@ -1,8 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 import { BsArrowRightCircle } from "react-icons/bs";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import {motion, useAnimation} from "framer-motion"
+
+import { recommendations } from '@/app/services/recommendations'
 
 
 const ExpandableSection = ({title, children}) => {

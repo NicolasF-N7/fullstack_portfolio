@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import { motion, useAnimation } from 'framer-motion';
 import ExpandableSection from '@/app/components/expandableSection'
+import FlippingImage from '@/app/components/flippingImage'
 import { technologies_logo } from '@/app/services/techno-logo'
 import { portfolio_proj_data } from '@/app/portfolio/projects_data'
 import { recommendations } from '@/app/services/recommendations'
@@ -252,32 +253,34 @@ export default function Services() {
               {recommendations.map((recomm, index) => (
                 <SwiperSlide className="" key={index}>
 
-                  <div className="flex flex-col h-full">
-                    <div className="flex items-center justify-center mt-8 rounded-tl-lg rounded-br-lg bg-expandedSection h-full overflow-hidden">
-                      <motion.img
-                        src={hovered ? '/images/LinkedIn_icon.svg' : recomm.profile_picture_src}
-                        alt={recomm.profile_picture_alt}
-                        className="rounded-full"
-                        whileHover={{ scale: 1.1 }}
-                        transition={{ duration: 0.3 }}
-                      />
-
-
-                      <Image
-                        className="mx-auto rounded-full"
-                        height={128}
-                        width={128}
-                        src={recomm.profile_picture_src}
-                        alt={recomm.profile_picture_alt}/>
-
-                      <Link className="mr-auto mb-4 self-end align-left" target="_blank" href={recomm.linkedIn_profile}>
-                        <Image
-                          height={32}
-                          width={32}
-                          src="/images/LinkedIn_icon.svg"
-                          alt="LinkedIn logo"/>
+                  <div className="flex justify-center items-center rounded-tl-lg rounded-br-lg bg-expandedSection overflow-hidden">
+                    
+                      <Link className="mx-auto my-4" target="_blank" href={recomm.linkedIn_profile}>
+                        <FlippingImage src_initial={recomm.profile_picture_src} alt_initial={recomm.profile_picture_alt} 
+                        src_flipped="/images/LinkedIn_icon.svg" alt_flipped="LinkedIn logo" />
+                        
+                        {/*<motion.div
+                                                  className="flex w-1/2 overflow-hidden"
+                                                  
+                                                  transition={{ duration: 0.5 }}>
+                                                  <Image
+                                                    className="rounded-full"
+                                                    height={128}
+                                                    width={128}
+                                                     whileHover={{ x: '-100%' }}
+                                                    animate={{ x: 0 }}
+                                                    exit={{ x: '-100%' }}
+                                                    src={recomm.profile_picture_src}
+                                                    alt={recomm.profile_picture_alt}/>
+                                                  <Image
+                                                    height={128}
+                                                    width={128}
+                                                   
+                                                    src="/images/LinkedIn_icon.svg"
+                                                    alt="LinkedIn logo"/>
+                                                </motion.div>*/}
                       </Link>
-                    </div>
+
                   </div>
                 </SwiperSlide>
               ))}
