@@ -237,7 +237,7 @@ export default function Services() {
               }}
               breakpoints={{
                 768: {
-                  slidesPerView: 2,
+                  slidesPerView: 3,
                 },
                 0: {
                   slidesPerView: 1,
@@ -286,8 +286,8 @@ export default function Services() {
               ))}
 
               {recommendations.map((recomm, index) => (
-                <SwiperSlide className="">
-                  <div className="">
+                <SwiperSlide className="h-full">
+                  <div className="h-full">
                     <p>{recomm.text}</p>
                   </div>
                 </SwiperSlide>
