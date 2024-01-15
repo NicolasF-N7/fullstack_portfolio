@@ -228,7 +228,7 @@ export default function Services() {
 
           <div className="swiper-container mx-auto">
             <Swiper
-              className="mt-8 h-[24em]"
+              className="mt-8 h-full"
               modules={[FreeMode, Navigation, Pagination, Grid, A11y, Mousewheel]}
               spaceBetween={30}
               grid={{
@@ -253,9 +253,9 @@ export default function Services() {
               {recommendations.map((recomm, index) => (
                 <SwiperSlide className="" key={index}>
 
-                  <div className="h-full flex justify-center items-center rounded-tl-lg rounded-br-lg bg-expandedSection overflow-hidden">
+                  <div className="h-[10em] flex justify-center items-center rounded-tl-lg rounded-br-lg bg-expandedSection overflow-hidden">
                     
-                      <Link className="h-full mx-auto my-4" target="_blank" href={recomm.linkedIn_profile}>
+                      <Link className="h-[90%] mx-auto" target="_blank" href={recomm.linkedIn_profile}>
                         <FlippingImage className="h-[10em]" src_initial={recomm.profile_picture_src} alt_initial={recomm.profile_picture_alt} 
                         src_flipped="/images/LinkedIn_icon.svg" alt_flipped="LinkedIn logo" />
                       </Link>
