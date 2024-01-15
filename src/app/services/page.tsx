@@ -253,32 +253,11 @@ export default function Services() {
               {recommendations.map((recomm, index) => (
                 <SwiperSlide className="" key={index}>
 
-                  <div className="flex justify-center items-center rounded-tl-lg rounded-br-lg bg-expandedSection overflow-hidden">
+                  <div className="h-full flex justify-center items-center rounded-tl-lg rounded-br-lg bg-expandedSection overflow-hidden">
                     
-                      <Link className="mx-auto my-4" target="_blank" href={recomm.linkedIn_profile}>
-                        <FlippingImage src_initial={recomm.profile_picture_src} alt_initial={recomm.profile_picture_alt} 
+                      <Link className="h-full mx-auto my-4" target="_blank" href={recomm.linkedIn_profile}>
+                        <FlippingImage className="h-[10em]" src_initial={recomm.profile_picture_src} alt_initial={recomm.profile_picture_alt} 
                         src_flipped="/images/LinkedIn_icon.svg" alt_flipped="LinkedIn logo" />
-                        
-                        {/*<motion.div
-                                                  className="flex w-1/2 overflow-hidden"
-                                                  
-                                                  transition={{ duration: 0.5 }}>
-                                                  <Image
-                                                    className="rounded-full"
-                                                    height={128}
-                                                    width={128}
-                                                     whileHover={{ x: '-100%' }}
-                                                    animate={{ x: 0 }}
-                                                    exit={{ x: '-100%' }}
-                                                    src={recomm.profile_picture_src}
-                                                    alt={recomm.profile_picture_alt}/>
-                                                  <Image
-                                                    height={128}
-                                                    width={128}
-                                                   
-                                                    src="/images/LinkedIn_icon.svg"
-                                                    alt="LinkedIn logo"/>
-                                                </motion.div>*/}
                       </Link>
 
                   </div>
