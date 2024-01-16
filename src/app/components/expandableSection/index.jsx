@@ -35,7 +35,7 @@ const ExpandableSection = ({title, children}) => {
                 <motion.div
                   initial={false}
                   animate={{ rotate: isExpanded ? [0, 90] : [90,180,270,360] }}
-                  whileHover={{ rotate: 10 }}
+                  whileHover={isExpanded ? {} : { rotate: 390 }}
                   transition={{ type: 'spring', stiffness: 200, damping: 15 }}
                   className="text-lightBrown text-xl font-bold"
                 >

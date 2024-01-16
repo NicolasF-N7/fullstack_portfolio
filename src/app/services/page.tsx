@@ -23,13 +23,19 @@ export default function Services() {
   return (
     <div className="text-black">
       {/*______Services title______*/}
- 		  <h1 className="text-center font-bold text-xl mt-8">Mes Services</h1>
+ 		  <motion.h1 className="text-center font-bold text-xl mt-8"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}>Mes Services</motion.h1>
       
       <div className="ml-0 sm:ml-14">
         {/*vvvvvv Container Text & Picture vvvvvvvv*/}
         <div className="flex flex-col sm:flex-row">
           {/*______Picture______*/}
-          <div className="order-1 sm:order-2 m-8 ml-16 sm:ml-0 mb-4 sm:mb-0">
+          <motion.div className="order-1 sm:order-2 m-8 ml-16 sm:ml-0 mb-4 sm:mb-0"
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}>
             <Image
                 src="/images/nfoin_StationF_centered_compressed.jpg"
                 alt="Portrait of Nicolas Foin"
@@ -37,13 +43,17 @@ export default function Services() {
                 height="480"
                 className="rounded"
               />
-          </div>
+          </motion.div>
           {/*______Picture______*/}
 
           {/*______Text______*/}
           <div className="order-2 sm:order-1 m-8">
             {/* Pitch*/}
-            <div className="rounded p-8 bg-lightBrown">
+            <motion.div className="rounded p-8 bg-lightBrown"
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}>
+
               <div>
                 <h3 className="font-bold text-xl">Je suis</h3>
                 <p>Nicolas Foin, Freelance en développemment web fullstack spécialisé en React.</p>
@@ -61,7 +71,8 @@ export default function Services() {
                 <p>Des sites vitrines, ecommerce, et MVP / prototype d’applications web.</p>
                 <br/>
               </div>
-            </div>
+
+            </motion.div>
           </div>
           {/*______Text______*/}
         </div>
