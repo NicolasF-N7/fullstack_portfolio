@@ -3,7 +3,9 @@ import { Inter } from 'next/font/google'
 import Navigation from './components/navigation'
 import Header from './components/header'
 import Footer from './components/footer'
+import {Providers} from "./providers";
 import './globals.css'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,18 +20,21 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <body className={inter.className}>
-        <Header />
+        {/*Providers is a wrapper to use NextUI*/}
+        <Providers>
+          <Header />
 
-        <div className="min-h-screen flex">
-          <Navigation />
-          <div className="flex-1 bg-sandSecondary">
-            {children}
+          <div className="min-h-screen flex">
+            <Navigation />
+            <div className="flex-1 bg-sandSecondary">
+              {children}
+            </div>
           </div>
-        </div>
 
-        <Footer />
+          <Footer />
+        </Providers>
       </body>
     </html>
   )
