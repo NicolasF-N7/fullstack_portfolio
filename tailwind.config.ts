@@ -34,12 +34,15 @@ const config: Config = {
       themes: {
         light: {
           colors: {
-            primary: {
+            default: {
               DEFAULT: "#463715",
+            },
+            primary: {
+              DEFAULT: "#816729",
               foreground: "#000000",
             },
             secondary: {
-              DEFAULT: "#816729",
+              DEFAULT: "#186F6531",
               foreground: "#000000",
             },
             success: {
