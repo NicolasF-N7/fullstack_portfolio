@@ -10,6 +10,8 @@ import { portfolio_proj_data } from '@/app/portfolio/projects_data'
 import { recommendations } from '@/app/services/recommendations'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Pagination, Grid, A11y, Mousewheel } from 'swiper/modules';
+import { Button } from "@nextui-org/react";
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/mousewheel';
@@ -143,11 +145,15 @@ export default function Services() {
         </div>
 
         <div className="flex justify-center mt-8">
-          <Link className="p-4 w-1/2 sm:w-1/4 bg-redAccent border-sandSecondary border-2" href="/portfolio">
-            <div className="text-center text-sandSecondary font-bold">
-              <p>Détails</p>
-            </div>
-          </Link>
+          
+            <Link href="/portfolio">
+              <Button color="danger" className="px-16 py-6 border-sandSecondary border-2" variant="solid" radius="none">
+                <div className="text-center text-sandSecondary font-bold">
+                  <p>Détails</p>
+                </div>
+              </Button>
+            </Link>
+          
         </div>
       </div>
       {/*^^^^^Projects Carousel section ^^^^^*/}
@@ -220,10 +226,12 @@ export default function Services() {
           <p className="sm:ml-[20%] ml-0 font-bold text-xl text-black mb-4 sm:mb-0">Discutons de vos besoins !</p>
 
           <div className="sm:mr-[20%] mr-0  flex justify-center">
-            <Link className="p-4 bg-redAccent border-sandSecondary border-2" href="/contact">
-              <div className="text-center text-sandSecondary font-bold">
-                <p>Contactez moi</p>
-              </div>
+            <Link href="/contact">
+              <Button color="danger" className="px-16 py-6 border-sandSecondary border-2" variant="solid" radius="none">
+                <div className="text-center text-sandSecondary font-bold">
+                  <p>Contactez moi</p>
+                </div>
+              </Button>
             </Link>
           </div>
 
