@@ -159,16 +159,16 @@ const Contact = () => {
             </form>
 
             {/*Success message*/}
-            <div className={`${formSent ? '' : 'hidden'} relative`}>
-              <h1 className="mt-16 text-md font-bold text-brownTertiary">{serverResponseText}</h1>
-              <div class="mt-4 absolute w-full h-1 bg-lightBrown"></div>
+            <div className={`${formSent ? '' : 'hidden'} relative my-16`}>
+              <h1 className="text-md font-bold text-brownTertiary">{serverResponseText}</h1>
+              <div className="mt-4 absolute w-full h-1 bg-lightBrown"></div>
             </div>
 
             {/*Error message*/}
             
-            <div className={`${showErrorMessage ? '' : 'hidden'} relative`}>
-              <h1 className="mt-16 text-md font-bold text-redAccent">{errorMessage}</h1>
-              <div class="mt-4 absolute w-full h-1 bg-redAccent"></div>
+            <div className={`${showErrorMessage ? '' : 'hidden'} relative my-16`}>
+              <h1 className="text-md font-bold text-redAccent">{errorMessage}</h1>
+              <div className="mt-4 absolute w-full h-1 bg-redAccent"></div>
             </div>
           </div>
         </div>
