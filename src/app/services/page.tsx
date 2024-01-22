@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, useAnimation } from 'framer-motion';
 import ExpandableSection from '@/app/components/expandableSection'
 import FlippingImage from '@/app/components/flippingImage'
-import { technologies_logo } from '@/app/services/techno-logo'
+import { technologies_logo } from '@/app/services/technologies'
 import { portfolio_proj_data } from '@/app/portfolio/projects_data'
 import { recommendations } from '@/app/services/recommendations'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -102,7 +102,7 @@ export default async function Services() {
       {/*______Services______*/}
 
       {/*vvvvv Projects Carousel section vvvvv*/}
-      <div className="m-8 mx-0 p-8 bg-lightBrown">
+      <div className="m-8 mx-0 p-2 sm:p-8 bg-lightBrown">
         <h3 className="font-bold text-xl text-center pb-8">Mes réalisations</h3>
 
         <div className="swiper-container mx-auto">
