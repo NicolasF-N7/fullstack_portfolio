@@ -120,9 +120,7 @@ export default function Services() {
             loop={true}
             freeMode={false}
             navigation
-            pagination={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}>
+            pagination={{ clickable: true }}>
 
             {portfolio_proj_data.map((project, index) => (
               <SwiperSlide className="swiper-slide" key={index}>
