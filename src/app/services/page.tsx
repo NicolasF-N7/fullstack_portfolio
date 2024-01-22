@@ -21,9 +21,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 
-export default function Services() {
+export default async function Services() {
   return (
     <div className="text-black">
+
       {/*______Services title______*/}
  		  <motion.h1 className="text-center font-bold text-xl mt-8"
         initial={{ opacity: 0, y: 100 }}
@@ -105,6 +106,7 @@ export default function Services() {
         <h3 className="font-bold text-xl text-center pb-8">Mes réalisations</h3>
 
         <div className="swiper-container mx-auto">
+          
           <Swiper
             modules={[FreeMode, Navigation, Pagination, A11y, Mousewheel]}
             spaceBetween={"25em"}
@@ -123,7 +125,7 @@ export default function Services() {
             pagination={{ clickable: true }}>
 
             {portfolio_proj_data.map((project, index) => (
-              <SwiperSlide className="swiper-slide" key={index}>
+              <SwiperSlide className="swiper-slide" key={`project-${index}`}>
                 <div className="text-center">
                   <div className="rounded bg-white">
                     <Image
@@ -163,6 +165,7 @@ export default function Services() {
           <h2 className="text-xl font-bold text-center">Les technologies que je maitrise</h2>
 
           <div className="swiper-container mx-auto">
+            
             <Swiper
               className="mt-8 h-[24em]"
               modules={[FreeMode, Navigation, Pagination, Grid, A11y, Mousewheel]}
@@ -187,7 +190,7 @@ export default function Services() {
 
               {/* Slide */}
               {technologies_logo.map((techno, index) => (
-                <SwiperSlide className="" key={index}>
+                <SwiperSlide className=""  key={`techno-pict-${index}`}>
 
                   <div className="flex flex-col h-full">
                     <div className="flex items-center justify-center mt-8 rounded-tl-lg rounded-br-lg bg-white h-full overflow-hidden">
@@ -203,7 +206,7 @@ export default function Services() {
               ))}
 
               {technologies_logo.map((techno, index) => (
-                <SwiperSlide className="">
+                <SwiperSlide className=""  key={`techno-desc-${index}`}>
                   <div className="">
                     <p>{techno.description}</p>
                   </div>
@@ -212,7 +215,6 @@ export default function Services() {
 
             </Swiper>
           </div>
-
         </div>
       </div>
       {/*^^^^^ Tech skills ^^^^^*/}
@@ -244,6 +246,7 @@ export default function Services() {
           <h2 className="text-xl font-bold text-center">J'ai travaillé pour eux</h2>
 
           <div className="swiper-container mx-auto">
+            
             <Swiper
               className="mt-8 h-full"
               modules={[FreeMode, Navigation, Pagination, Grid, A11y, Mousewheel]}
@@ -268,7 +271,7 @@ export default function Services() {
 
               {/* Slide */}
               {recommendations.map((recomm, index) => (
-                <SwiperSlide className="" key={index}>
+                <SwiperSlide key={`recommendation-portrait-${index}`}>
 
                   <div className="h-[10em] flex justify-center items-center rounded-tl-lg rounded-br-lg bg-expandedSection overflow-hidden">
                     
@@ -282,13 +285,12 @@ export default function Services() {
               ))}
 
               {recommendations.map((recomm, index) => (
-                <SwiperSlide className="h-full">
+                <SwiperSlide  key={`recommendation-text-${index}`} className="h-full">
                   <div className="h-full">
                     <p>{recomm.text}</p>
                   </div>
                 </SwiperSlide>
               ))}
-
             </Swiper>
           </div>
 

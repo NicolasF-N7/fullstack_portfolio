@@ -6,7 +6,6 @@ import Image from "next/image";
 import { motion, useAnimation } from 'framer-motion';
 
 const About = () => {
-
   return (
       <>
         <div className="flex-col m-8 pl-10 md:pl-14 text-center">

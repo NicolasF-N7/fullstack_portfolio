@@ -31,7 +31,7 @@ But don't use <form onSubmit={handleSubmit(onSubmit)}> becaude it doesn't trigge
 So instead, use <form onSubmit={onSubmit}>, and onSubmit is triggered, wiiiiith the right data from the form fields :)
 */
 
-const Contact = () => {
+const Contact  = () => {
   const { register } = useForm();
   const subjectInputRef = useRef(null);//USELESS?
   //True when the response from the server is received, and is 200 OK
