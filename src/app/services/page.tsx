@@ -37,7 +37,7 @@ export default async function Services() {
           {/*______Picture______*/}
           <motion.div className="order-1 sm:order-2 m-8 ml-16 sm:ml-0 mb-4 sm:mb-0"
             initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}  
             transition={{ duration: 0.5, ease: 'easeOut' }}>
             <Image
                 src="/images/nfoin_StationF_centered_compressed.jpg"
@@ -65,7 +65,7 @@ export default async function Services() {
 
               <div>
                 <h3 className="font-bold text-xl">J'aide</h3>
-                <p>Les TPE / PME partout en France à développer leur visibitilité et leur activité en ligne, et également les startups early stage qui ont besoins de tester leur marché rapidement.</p>
+                <p>Les TPE / PME partout en France à développer leur visibitilité et leur activité en ligne, et également les startups early stage qui ont besoins de prototypes pour tester leur marché rapidement.</p>
                 <br/>
               </div>
 
@@ -81,6 +81,22 @@ export default async function Services() {
         </div>
         {/*^^^^^^^ Container Text & Picture ^^^^^^^*/}
       </div>
+
+      {/*vvvvvv Freelance vs Agency vvvvvvvv*/}
+      <div className="m-16 mx-0 bg-bluePrimary">
+        <div className="p-8">
+          <h3 className="text-center font-bold text-xl">Freelance ou Agence digitale ?</h3>
+          <p className="mt-4 whitespace-pre-wrap">    Pour réaliser des projets complexes comme des applications web avec des problématiques de <span className="font-bold">passage à l'échelle</span>, ou des projets nécessitant une <span className="font-bold">solution web et mobile</span>, alors il vaut mieux faire appel à une agence digitale qui aura les ressources nécessaires.
+            <br/>Si vous voulez créer le concurrent d'Amazon effectivement, on n'est pas sûr d'arriver au bout avec une seule personne y travaillant dessus...
+            <br/>De manière générale, au plus un projet est complexe et nécessite des compétences à la fois diverse et poussées, au mieux une agence pourra vous aider.
+            </p>
+          <br/>
+          <p className="whitespace-pre-wrap">    Cependant, pour des projets de taille intermédiaire, un freelance aura l'avantage de proposer des <span className="font-bold">tarifs plus abordables</span> puisqu'il n'y a pas une équipe entière à rémunérer. Et vous bénéficiez d'une communication plus rapide <span className="font-bold">et d'une meilleure réactivité</span>, car il n'y a pas d'intermédiaire entre vous et la personne qui crée votre site.
+          De plus, un freelance étant plus flexible sur son emploi du temps, il peut vous offrir des <span className="font-bold">délais plus court </span>pour réaliser un projet.
+          </p>
+        </div>
+      </div>
+      {/*^^^^^^^ Freelance vs Agency ^^^^^^^*/}
 
       {/*______Services______*/}
       <ExpandableSection title="Site vitrine">
