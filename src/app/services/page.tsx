@@ -59,19 +59,19 @@ export default async function Services() {
 
               <div>
                 <h3 className="font-bold text-xl">Je suis</h3>
-                <p>Nicolas Foin, Freelance en développemment web fullstack spécialisé en React.</p>
+                <p>Nicolas Foin, ingénieur freelance en développemment web fullstack spécialisé en React.</p>
                 <br/>
               </div>
 
               <div>
                 <h3 className="font-bold text-xl">J'aide</h3>
-                <p>Les TPE / PME partout en France à développer leur visibitilité et leur activité en ligne, et également les startups early stage qui ont besoins de prototypes pour tester leur marché rapidement.</p>
+                <p>Les TPE / PME partout en France à développer leur visibitilité et leur activité en ligne, ainsi que les startups early stage qui ont besoins de prototypes pour tester leur marché rapidement.</p>
                 <br/>
               </div>
 
               <div>
                 <h3 className="font-bold text-xl">En offrant</h3>
-                <p>Des sites vitrines, ecommerce, et MVP / prototype d’applications web.</p>
+                <p>Des sites vitrines, ecommerce, et produit minimal viable d’applications web.</p>
                 <br/>
               </div>
 
@@ -84,15 +84,15 @@ export default async function Services() {
 
       {/*vvvvvv Freelance vs Agency vvvvvvvv*/}
       <div className="m-16 mx-0 bg-bluePrimary">
-        <div className="p-8">
+        <div className="p-8 px-16">
           <h3 className="text-center font-bold text-xl">Freelance ou Agence digitale ?</h3>
           <p className="mt-4 whitespace-pre-wrap">    Pour réaliser des projets complexes comme des applications web avec des problématiques de <span className="font-bold">passage à l'échelle</span>, ou des projets nécessitant une <span className="font-bold">solution web et mobile</span>, alors il vaut mieux faire appel à une agence digitale qui aura les ressources nécessaires.
-            <br/>Si vous voulez créer le concurrent d'Amazon effectivement, on n'est pas sûr d'arriver au bout avec une seule personne y travaillant dessus...
+            <br/>Si vous voulez créer le concurrent d'Amazon effectivement, on n'est pas sûr d'arriver au bout avec une seule personne qui travaille dessus...
             <br/>De manière générale, au plus un projet est complexe et nécessite des compétences à la fois diverse et poussées, au mieux une agence pourra vous aider.
             </p>
           <br/>
-          <p className="whitespace-pre-wrap">    Cependant, pour des projets de taille intermédiaire, un freelance aura l'avantage de proposer des <span className="font-bold">tarifs plus abordables</span> puisqu'il n'y a pas une équipe entière à rémunérer. Et vous bénéficiez d'une communication plus rapide <span className="font-bold">et d'une meilleure réactivité</span>, car il n'y a pas d'intermédiaire entre vous et la personne qui crée votre site.
-          De plus, un freelance étant plus flexible sur son emploi du temps, il peut vous offrir des <span className="font-bold">délais plus court </span>pour réaliser un projet.
+          <p className="whitespace-pre-wrap">    Cependant, pour des projets de taille intermédiaire, un freelance aura l'avantage de proposer des <span className="font-bold">tarifs plus abordables</span> puisqu'il n'y a pas une équipe entière et différents niveau de management à rémunérer. Vous bénéficiez également d'une communication plus rapide <span className="font-bold">et d'une meilleure réactivité</span>, car il n'y a pas d'intermédiaire entre vous et la personne qui crée votre site.
+          De plus, les freelances sont souvent plus flexibles sur leur emploi du temps et peuvent donc vous offrir des <span className="font-bold">délais plus court </span>pour réaliser un projet.
           </p>
         </div>
       </div>
@@ -101,19 +101,20 @@ export default async function Services() {
       {/*______Services______*/}
       <ExpandableSection title="Site vitrine">
         {/* Content for Section 1 */}
-        <p>Je crée des sites vitrine avec le CMS Wordpress pour gérer le stockage de données et le backend. Selon la personnalisation souhaité et le budget, je peux réaliser la partie interface utilisateur avec React, ou bien avec l’editeur de thème Elementor.
-          Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi même sur Figma.</p>
+        <p className="whitespace-pre-wrap">    Je crée des sites vitrine avec le CMS Wordpress pour gérer l'administration de données et le backend. Selon la personnalisation souhaitée et le budget, je peux réaliser la partie interface utilisateur avec React, ou bien avec l’editeur de thème Elementor.
+        <br/>    Il me faut les maquettes graphiques de chaque page pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi-même sur Figma.</p>
       </ExpandableSection>
 
       <ExpandableSection title="E-commerce">
         {/* Content for Section 1 */}
-        <p>J’utilise Shopify pour créer les sites ecommerces. Selon votre budget, je peux créer l’interface utilisateur totalement personalisée en React, ou bien utiliser l’editeur de thème pour un site plus rapidement fait.
-          Il me faut les maquettes graphiques de chaque pages pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi même sur Figma.</p>
+        <p className="whitespace-pre-wrap">    J’utilise Shopify pour créer les sites ecommerces. Selon votre budget, je peux créer l’interface utilisateur totalement personnalisée en React, ou bien utiliser l’éditeur de thème intégré à Shopify.
+        <br/>    Il me faut les maquettes graphiques de chaque page pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi-même sur Figma.</p>
       </ExpandableSection>
 
       <ExpandableSection title="Application web">
         {/* Content for Section 1 */}
-        <p>Pour la création de SaaS et autres applications web nécessitant des fonctionalités uniques, j’utilise React pour faire l’interface utilisateur, et NodeJS pour créer un backend léger et rapide.</p>
+        <p className="whitespace-pre-wrap">    Pour la création de SaaS et autres applications web nécessitant des fonctionnalités sur-mesures, j’utilise React pour faire l’interface utilisateur, et NodeJS pour créer un backend léger et rapide.
+        <br/>    Il me faut les maquettes graphiques de chaque page pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi-même sur Figma.</p>
       </ExpandableSection>
       {/*______Services______*/}
 

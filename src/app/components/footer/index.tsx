@@ -1,5 +1,6 @@
 import React from "react";
 import Link from 'next/link';
+import { socials } from '@/app/contact/social-networks'
 
 const Footer = ({isOpen, toggle}) => {
   return (
@@ -37,8 +38,8 @@ const Footer = ({isOpen, toggle}) => {
               <div className="mx-10 my-8 border-black border"></div>
 
               <div className="flex justify-center">
-                <p className="mx-4">LinkedIn</p>
-                <p className="mx-4">GitHub</p>
+                <Link className="mx-4" href={socials.linkedIn}>LinkedIn</Link>
+                <Link className="mx-4" href={socials.github}>GitHub</Link>
               </div>
 
               <div className="flex justify-center">
