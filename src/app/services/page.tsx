@@ -40,7 +40,7 @@ export default async function Services() {
             animate={{ opacity: 1, x: 0 }}  
             transition={{ duration: 0.5, ease: 'easeOut' }}>
             <Image
-                src="/images/nfoin_StationF_centered_compressed.jpg"
+                src="/images/nicolas/nfoin_StationF_centered_compressed.jpg"
                 alt="Portrait of Nicolas Foin"
                 width="720"
                 height="480"

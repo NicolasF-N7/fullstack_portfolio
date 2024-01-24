@@ -36,7 +36,7 @@ const About = () => {
                 placeholder="blur"
                 width="480"
                 height="480"
-                src="/images/portfolio/nico-pict-kl.jpeg"
+                src="/images/nicolas/portrait-nature.jpeg"
                 alt="Picture of Nicolas smiling"/>
             </div>
           </div>
@@ -51,7 +51,7 @@ const About = () => {
                   placeholder="blur"
                   width="480"
                   height="480"
-                  src="/images/portfolio/nico-pict-indo.jpeg"
+                  src="/images/nicolas/nico-pict-indo.jpeg"
                   alt="Picture of Nicolas below an indonesian flag"/>
             </div>
 

@@ -109,8 +109,8 @@ body {
 }
 
 .slider-image{
-  max-height: 60%;
-  max-width: 70%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .swiper-button-next {
@@ -119,4 +119,25 @@ body {
 
 .swiper-button-prev {
   @apply left-4;
+}
+
+.swiper-pagination-bullet{
+  background-color: theme('colors.brownTertiary') !important;
+  width: 20px !important;
+  height: 10px !important;
+  border-radius: 0px !important;
+  border-radius: 0px !important;
+  border-radius: 3px !important;
+}
+.swiper-pagination-bullet-active {
+  width: 20px !important;
+  height: 10px !important;
+}
+
+.slide-swiper-container .swiper-pagination-bullet {
+  background-color: theme('colors.sandSecondary') !important;
+}
+
+.swiper-zoom-container{
+  cursor: zoom-in;
 }

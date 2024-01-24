@@ -35,35 +35,34 @@ const Portfolio = ({isOpen, toggle}) => {
 			            onSwiper={handleSwiperInit}
 			            slidesPerView={1}
 			            mousewheel={true}
-			            freeMode={true}
+			            freeMode={false}
 			            pagination={{ clickable: true }}
 			            effect={'creative'}
-				        creativeEffect={{
-				        	limitProgress: 2,
-					        prev: {
-					            shadow: true,
-					            scale: 0.7,
-					            origin: 'left center',
-					            translate: ['-5%', 0, -10],
-					            rotate: [0, 0, 0],
-					        },
-					        next: {
-					          	shadow: false,
-					          	scale: 1.3,
-					            origin: 'right center',
-					            /* [x, y, z] */
-					            translate: ['200%', 0, 50],
-					            rotate: [0, 0, 0],
-					        },
-				        }}>
+				        	creativeEffect={{
+					        	limitProgress: 2,
+						        prev: {
+						            shadow: true,
+						            scale: 0.7,
+						            origin: 'left center',
+						            translate: ['-5%', 0, -10],
+						            rotate: [0, 0, 0],
+						        },
+						        next: {
+						          	shadow: false,
+						          	scale: 1.3,
+						            origin: 'right center',
+						            /* [x, y, z] */
+						            translate: ['200%', 0, 50],
+						            rotate: [0, 0, 0],
+						        },
+				        	}}>
 
 			            {portfolio_proj_data.map((project, index) => (
 			              <SwiperSlide className="bg-bluePrimary rounded portfolio-slides" key={index}>
-			                <PortfolioSlide title={project.title} imageList={project.screenshots} gist={project.gist} />
+			                <PortfolioSlide project_data={project} />
 			              </SwiperSlide>
 			            ))}
-			            <SwiperSlide className="swiper-slide">
-			            </SwiperSlide>
+			            
 			        </Swiper>
 	        	</div>
 	        </div>

@@ -1,23 +1,32 @@
-import hestauScreenshot from '/public/images/projects_media/hestau-720.png'
-import hestauArtistesScreenshot from '/public/images/projects_media/hestau-artistes-720.png'
-import hestauDescriptionScreenshot from '/public/images/projects_media/hestau-description-720.png'
-import hestauProgrammeScreenshot from '/public/images/projects_media/hestau-programme-720.png'
+import hestauScreenshot from '/public/images/projects_media/hestau-festival/hestau-wless720.png'
+import hestauArtistesScreenshot from '/public/images/projects_media/hestau-festival/hestau-artistes-w720.png'
+import hestauDescriptionScreenshot from '/public/images/projects_media/hestau-festival/hestau-description-w720.png'
+import hestauProgrammeScreenshot from '/public/images/projects_media/hestau-festival/hestau-programme-w720.png'
 
-import mynftBridgeScreenshot from '/public/images/projects_media/mynft-bridge/MyNFT-Bridge-720.png'
-import mynftBridgeProgressScreenshot from '/public/images/projects_media/mynft-bridge/bridge-progress-720.png'
-import mynftBridgeBreadcrumbScreenshot from '/public/images/projects_media/mynft-bridge/mynft-bridge-breadcrumb-720.png'
-import mynftBridgeSuccessScreenshot from '/public/images/projects_media/mynft-bridge/mynft-bridge-mig-success-720.png'
+import mynftBridgeScreenshot from '/public/images/projects_media/mynft-bridge/MyNFT-Bridge-w720.png'
+import mynftBridgeProgressScreenshot from '/public/images/projects_media/mynft-bridge/bridge-progress-w720.png'
+import mynftBridgeBreadcrumbScreenshot from '/public/images/projects_media/mynft-bridge/mynft-bridge-breadcrumb-w720.png'
+import mynftBridgeSuccessScreenshot from '/public/images/projects_media/mynft-bridge/mynft-bridge-mig-success-w720.png'
 
-import nexchangeHomepage from '/public/images/projects_media/nexchange/homepage-720.png'
-import nexchangeMetamask from '/public/images/projects_media/nexchange/metamask.png'
+import nexchangeHomepage from '/public/images/projects_media/nexchange/homepage-w720.png'
+import nexchangeMetamask from '/public/images/projects_media/nexchange/metamask-w720.png'
 
-import mintWallet from '/public/images/projects_media/mynft-mint/wallet-connection.png'
+import mintWallet from '/public/images/projects_media/mynft-mint/wallet-connection-w720.png'
 import mintForm from '/public/images/projects_media/mynft-mint/form.png'
 
-import domainTokMint from '/public/images/projects_media/mynft-domain-tokenization/mint-domain.png'
-import domainTokEditDNS from '/public/images/projects_media/mynft-domain-tokenization/dns-edit.png'
+import domainTokMint from '/public/images/projects_media/mynft-domain-tokenization/mint-domain-w720.png'
+import domainTokEditDNS from '/public/images/projects_media/mynft-domain-tokenization/dns-edit-w720.png'
 
-import islaPriceScraper from '/public/images/projects_media/isla-price-scraper/price-scraper.png'
+import islaPriceScraper from '/public/images/projects_media/isla-price-scraper/price-scraper-w720.png'
+import islaScraperRunning from '/public/images/projects_media/isla-price-scraper/running-w720.png'
+import islaScraperResult from '/public/images/projects_media/isla-price-scraper/result-w720.png'
+
+import islaPopularityScraper from '/public/images/projects_media/isla-popularity/vc-w720.png'
+import islaPopularityScraperResult from '/public/images/projects_media/isla-popularity/result-w720.png'
+
+import lbcExtractor from '/public/images/projects_media/lbc-price-extension/lbc-w720side.png'
+import lbcExtractorResult from '/public/images/projects_media/lbc-price-extension/result-small-w720.png'
+
 
 /* 
 Structure of portfolio_proj_data:
@@ -31,12 +40,12 @@ x MYNFT / Perso Nexchange
 x MyNFT Bridge
 x MyNFT Mint
 x MyNFT DNS Tokenization
-- ISLA - Isla github marketplaces prices (frontend + scraper)
-- ISLA Prices, visibility, popularity scraper
+x ISLA - Isla github marketplaces prices (frontend + scraper)
+x ISLA Prices, (visibility), popularity scraper
 - ISLA Vinted auto post
-- LBC Price extractor extension
-- Hestau
-- Portfolio
+x LBC Price extractor extension
+x Hestau
+x Portfolio
 
 Mapping array to easily change projects order?
 */
@@ -44,46 +53,23 @@ Mapping array to easily change projects order?
 
 export const portfolio_proj_data = [
 	{ 
-		title: "Agrégateur de prix de marketplaces - ISLA",
-		gist: "Script récupérant les prix de vêtements sur des marketplaces de seconde main",
-		desc: "Ce projet est un MVP qui avait pour but de récupérer les données des prix des vêtements ainsi que leurs caractéristiques pour pouvoir proposer un outil de prédiction / suggestion de prix pour les habits usagés selon leur valeur sur le marché de la seconde main. Seul le backend a été travaillé. Il a été fait avec Node-JS et Express.",
-		tech_stack: ["Node-JS", ""],
-		github: ["https://github.com/ISLA-Tech/Marketplace_prices_frontend/tree/main"],
-		screenshots: [
-			{
-				src: islaPriceScraper,
-				alt: "Web application to scrape prices from second hand garments on several marketplaces"
-			},
-		]
-	},
-	{ 
-		title: "Bridge - MyNFT",
-		gist: "Application web permettant de transférer des NFT entre différentes blockchains",
-		desc: "J'ai créé le frontend de cette application web en pure javascript à partir des maquettes fournies par l'équipe de design. Je l'ai connecté à l'API du backend ainsi qu'aux différentes blockchains utilisées en utilisant le module Web3-JS.",
-		tech_stack: ["Node-JS", "Solidity"],
-		github: ["https://github.com/Perpetual-Altruism-Ltd/myNFT-Bridge"],
+		title: "Mon Portfolio - Freelance",
+		gist: "Site de présentation de mes services de developpement web",
+		desc: "Ce site a été fait en typescript avec React-JS et Next-JS, et Tailwind-CSS pour le design de l'interface. Les animations sont faites grâce à Framer-Motion. La maquette pour l'interface utilisateur à été faite sous Figma.",
+		tech_stack: ["React-JS", "Tailwind-CSS", "Framer-Motion", "Figma"],
+		github: ["https://github.com/NicolasF-N7/fullstack_portfolio"],
 		screenshots: [
 			{
 				src: mynftBridgeScreenshot,
-				alt: "Screenshot of MyNFT Bridge web app"
+				alt: ""
 			},
-			{
-				src: mynftBridgeBreadcrumbScreenshot,
-				alt: "Screenshot of MyNFT Bridge breadcrumb"
-			},
-			{
-				src: mynftBridgeProgressScreenshot,
-				alt: "Screenshot of MyNFT Bridge web app in progress; first step"
-			},
-			{
-				src: mynftBridgeSuccessScreenshot,
-				alt: "Screenshot of MyNFT Bridge web app success;"
-			}
 		]
 	},
 	{
 		title: "Festival de musique - Hestau",
 		gist: "Site de présentation du festival pour améliorer sa visibilité en ligne. Site de présentation du festival pour améliorer sa visibilité en ligne. Site de présentation du festival pour améliorer sa visibilité en ligne.",
+		desc: "deeesk",
+		tech_stack: ["Wordpress", "Elementor"],
 		github: [""],
 		screenshots: [
 			{
@@ -105,11 +91,91 @@ export const portfolio_proj_data = [
 
 		],
 	},
+	{ 
+		title: "Extracteur de prix LeBonCoin - Projet perso",
+		gist: "Extension chrome agrégeant les prix des annonces d'une recherche sur LeBonCoin sous format excel",
+		desc: "Cette extension chrome est fait en pure javascript. Il permet d'obtenir des informations des annonces LeBonCoin sous un format exploitable, pour par exemple déterminer le prix moyen d'un modèle de moto, pour pouvoir repérer plus facilement les annonces qui ont un prix inférieur au marché.",
+		tech_stack: ["Javascript"],
+		github: ["https://github.com/NicolasF-N7/LBC_price_extractor_extension"],
+		screenshots: [
+			{
+				src: lbcExtractor,
+				alt: "LeBonCoin page which data are extracted from"
+			},
+			{
+				src: lbcExtractorResult,
+				alt: "LeBonCoin prices extracted result under csv format"
+			}
+		]
+	},
+	{
+		title: "Estimateur de popularité des marques de mode - ISLA",
+		gist: "Script récupérant le nombre de produits d'une marque disponible sur le marché de la seconde main",
+		desc: "Ce MVP est un agrégateur de données basé sur Puppeteer, un module de web scraping en javascript.",
+		tech_stack: ["Puppeteer"],
+		github: ["https://github.com/NicolasF-N7/Brand_popularity_scraper"],
+		screenshots: [
+			{
+				src: islaPopularityScraper,
+				alt: "Agrégateur de donnés depuis Vestiaire Collective et d'autres marketplaces"
+			},
+			{
+				src: islaPopularityScraperResult,
+				alt: "Web scraper result"
+			}
+		]
+	},
+	{ 
+		title: "Agrégateur de prix de marketplaces - ISLA",
+		gist: "Script récupérant les prix de vêtements sur des marketplaces de seconde main",
+		desc: "Ce projet est un MVP qui avait pour but de récupérer les données des prix des vêtements ainsi que leurs caractéristiques pour pouvoir proposer un outil de prédiction / suggestion de prix pour les habits usagés selon leur valeur sur le marché de la seconde main. Seul le backend a été travaillé. Il a été fait avec Node-JS et Express.",
+		tech_stack: ["Node-JS", "EJS", "Express"],
+		github: ["https://github.com/ISLA-Tech/Marketplace_prices_frontend/tree/main"],
+		screenshots: [
+			{
+				src: islaPriceScraper,
+				alt: "Web application to scrape prices from second hand garments on several marketplaces"
+			},
+			{
+				src: islaScraperRunning,
+				alt: "Web app's Scraper running"
+			},
+			{
+				src: islaScraperResult,
+				alt: "Scraper result"
+			},
+		]
+	},
+	{ 
+		title: "Bridge - MyNFT",
+		gist: "Application web permettant de transférer des NFT entre différentes blockchains",
+		desc: "J'ai créé le frontend de cette application web en pure javascript à partir des maquettes fournies par l'équipe de design. Je l'ai connecté à l'API du backend ainsi qu'aux différentes blockchains utilisées en utilisant le module Web3-JS.",
+		tech_stack: ["Node-JS", "Solidity", "Express", "Web3-JS"],
+		github: ["https://github.com/Perpetual-Altruism-Ltd/myNFT-Bridge"],
+		screenshots: [
+			{
+				src: mynftBridgeScreenshot,
+				alt: "Screenshot of MyNFT Bridge web app"
+			},
+			{
+				src: mynftBridgeBreadcrumbScreenshot,
+				alt: "Screenshot of MyNFT Bridge breadcrumb"
+			},
+			{
+				src: mynftBridgeProgressScreenshot,
+				alt: "Screenshot of MyNFT Bridge web app in progress; first step"
+			},
+			{
+				src: mynftBridgeSuccessScreenshot,
+				alt: "Screenshot of MyNFT Bridge web app success;"
+			}
+		]
+	},
 	{
 		title: "NFTisation de noms de domaines",
 		gist: "Application web de création et échange de nom de domaines sous forme de NFT et sécurisé par une blockchain",
 		desc: "Cette application web est un prototype servant de preuve de concepte technique. J'ai construit le backend de celle-ci, en utilisant l'API du registrar de nom de domaine GoDaddy. Ce projet a été fait en pure javascript, avec Express",
-		tech_stack: ["Node-JS", "MongoDB"],
+		tech_stack: ["Node-JS", "MongoDB", "Express", "EJS"],
 		github: [""],
 		screenshots: [
 			{
@@ -126,7 +192,7 @@ export const portfolio_proj_data = [
 		title: "Mint - MyNFT",
 		gist: "Application web de création de NFT",
 		desc: "J'ai créé le module de connexion à la plupart des wallet utilisés en dans le monde des crypto monnaies. Et j'ai construit le backend avec Node-JS pour se connecter au frontend fait en pure javascript.",
-		tech_stack: ["Node-JS", "Solidity"],
+		tech_stack: ["Node-JS", "Solidity", "Express", "EJS"],
 		github: [],
 		screenshots: [
 			{
@@ -143,7 +209,7 @@ export const portfolio_proj_data = [
 		title: "Nexchange - Projet perso",
 		gist: "Marketplace prototype d'échange de NFT pour des objets de seconde main",
 		desc: "J'ai créé cette application web de bout en bout avec Express et Node-JS. L'interface est faite avec le moteur de template EJS, et en javascript pure.",
-		tech_stack: ["Node-JS", "MongoDB", "Solidity"],
+		tech_stack: ["Node-JS", "MongoDB", "Solidity", "Web3-JS", "Express", "EJS"],
 		github: ["https://github.com/NicolasF-N7/Nexchange"],
 		screenshots: [
 			{
@@ -153,19 +219,6 @@ export const portfolio_proj_data = [
 			{
 				src: nexchangeMetamask,
 				alt: "Metamask confirmation request for transaction on Nexchange"
-			},
-		]
-	},
-	{ 
-		title: "",
-		gist: "",
-		desc: "",
-		tech_stack: ["", ""],
-		github: [""],
-		screenshots: [
-			{
-				src: mynftBridgeScreenshot,
-				alt: ""
 			},
 		]
 	}
