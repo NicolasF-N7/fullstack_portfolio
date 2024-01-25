@@ -12,8 +12,8 @@ import 'swiper/css/pagination';
 const PortfolioSlide = ({project_data}) => {
   return (
       <>
-        <div className="flex-col p-8 text-center">
-          <h2 className="text-black font-bold text-xl mb-4">{project_data.title}</h2>
+        <div className="flex-col p-8">
+          <h2 className="text-center text-black font-bold text-xl mb-4">{project_data.title}</h2>
 
           <div className="flex items-center">
             <div className="flex-1 slide-swiper-container">
@@ -48,17 +48,24 @@ const PortfolioSlide = ({project_data}) => {
               </div>
 
               <div className="flex-1 px-4 mt-4 self-start">
-                <p className="p-2 bg-expandedSection">{project_data.desc}</p>
-                
-                <div className="flex flex-wrap items-start">
-                  {project_data.tech_stack.map((techno, index) => (
-                    <span className="text-xs font-semibold p-1.5 rounded-md mr-2 mb-2 mt-6 bg-lightBrown whitespace-no-wrap">{techno}</span>
-                  ))}
+
+                <div className="py-4 px-8 pt-2 bg-expandedSection">
+                  <h2 className="text-center font-bold text-xl">Le projet</h2>
+                  <p>{project_data.proj_desc}</p>
                 </div>
 
-                {project_data.github.map((gitLink, index) => (
-                  <div className="mt-4">
-                    <Link target="_blank" href={gitLink}>
+                <div className="py-4 px-8 pt-2 mt-4 bg-expandedSection">
+                  <h2 className="text-center font-bold text-xl">Comment c'est fait</h2>
+                  <p>{project_data.my_work}</p> 
+                </div>
+                
+                <div className="mt-6 flex flex-wrap items-start">
+                  {project_data.tech_stack.map((techno, index) => (
+                    <span className="text-xs font-semibold p-2 rounded-md mr-2 mb-2 bg-lightBrown whitespace-no-wrap">{techno}</span>
+                  ))}
+
+                  <div className="ml-auto transform hover:scale-110 transition-transform duration-300">
+                    <Link target="_blank" href={project_data.github}>
                       <Image
                         src={github_logo}
                         alt="Github Icon"
@@ -67,7 +74,9 @@ const PortfolioSlide = ({project_data}) => {
                         className="object-contain"/>
                     </Link>
                   </div>
-                ))}
+                </div>
+
+                
               </div>
           </div>
         </div>

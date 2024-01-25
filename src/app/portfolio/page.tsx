@@ -34,7 +34,11 @@ const Portfolio = ({isOpen, toggle}) => {
 			            grabCursor={true}
 			            onSwiper={handleSwiperInit}
 			            slidesPerView={1}
-			            mousewheel={true}
+			            direction='horizontal'
+			            mousewheel={{
+					          forceToAxis: true,
+					          sesntivity: 2
+					        }}
 			            freeMode={false}
 			            pagination={{ clickable: true }}
 			            effect={'creative'}
