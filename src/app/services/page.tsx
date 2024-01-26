@@ -83,7 +83,7 @@ export default async function Services() {
       </div>
 
       {/*vvvvvv Freelance vs Agency vvvvvvvv*/}
-      <div className="m-16 mx-0 bg-bluePrimary">
+      <div className="my-8 bg-bluePrimary">
         <div className="p-8 px-16">
           <h3 className="text-center font-bold text-xl">Freelance ou Agence digitale ?</h3>
           <p className="mt-4 whitespace-pre-wrap">    Pour réaliser des projets complexes comme des applications web avec des problématiques de <span className="font-bold">passage à l'échelle</span>, ou des projets nécessitant une <span className="font-bold">solution web et mobile</span>, alors il vaut mieux faire appel à une agence digitale qui aura les ressources nécessaires.
@@ -119,14 +119,19 @@ export default async function Services() {
       {/*______Services______*/}
 
       {/*vvvvv Projects Carousel section vvvvv*/}
-      <div className="m-8 mx-0 p-2 sm:p-8 bg-lightBrown">
-        <h3 className="font-bold text-xl text-center pb-8">Mes réalisations</h3>
+      <div className="project-overview-section my-8 p-2 sm:p-8 bg-lightBrown">
+        <h3 className="font-bold text-xl text-center pb-8">Mes projets</h3>
 
         <div className="swiper-container mx-auto">
           
           <Swiper
-            modules={[FreeMode, Navigation, Pagination, A11y, Mousewheel]}
-            spaceBetween={"25em"}
+            className="h-[28em]"
+            modules={[FreeMode, Navigation, Grid, Pagination, A11y, Mousewheel]}
+            spaceBetween={30}
+            grid={{
+              rows: 2,
+              fill: 'rows'
+            }}
             breakpoints={{
               768: {
                 slidesPerView: 3,
@@ -135,26 +140,31 @@ export default async function Services() {
                 slidesPerView: 1,
               },
             }}
-            mousewheel={true}
-            loop={true}
-            freeMode={false}
+            mousewheel={{
+              forceToAxis: true,
+              sensitivity: 0.3
+            }}
+            loop={false}
+            freeMode={true}
             navigation
             pagination={{ clickable: true }}>
 
             {portfolio_proj_data.map((project, index) => (
-              <SwiperSlide className="swiper-slide" key={`project-${index}`}>
-                <div className="text-center">
-                  <div className="rounded bg-white">
-                    <Image
-                      className="rounded w-full"
-                      src={project.screenshots[0].src}
-                      alt={project.screenshots[0].alt}/>
-                  </div>
+              <SwiperSlide className="swiper-slide" key={`project-img-${index}`}>
+                <div className="rounded bg-white overflow-hidden">
+                  <Image
+                    className="rounded max-h-[14em]"
+                    src={project.screenshots[0].src}
+                    alt={project.screenshots[0].alt}/>
+                </div>
+              </SwiperSlide>
+            ))}
 
-                  <div className="rounded mt-4 p-2 bg-white w-100">
-                    <p className="font-bold py-2">{project.title}</p>
-                    <p className="py-2">{project.gist}</p>
-                  </div>
+            {portfolio_proj_data.map((project, index) => (
+              <SwiperSlide className="swiper-slide" key={`project-gist-${index}`}>
+                <div className="rounded mt-2 p-4 py-2 bg-white w-100">
+                  <p className="text-center font-bold py-2">{project.title}</p>
+                  <p className="py-2">{project.gist}</p>
                 </div>
               </SwiperSlide>
             ))}
@@ -199,7 +209,10 @@ export default async function Services() {
                   slidesPerView: 1,
                 },
               }}
-              mousewheel={true}
+              mousewheel={{
+                forceToAxis: true,
+                sensitivity: 0.3
+              }}
               loop={false}
               freeMode={true}
               navigation
@@ -280,7 +293,10 @@ export default async function Services() {
                   slidesPerView: 1,
                 },
               }}
-              mousewheel={true}
+              mousewheel={{
+                forceToAxis: true,
+                sensitivity: 0.3
+              }}
               loop={false}
               freeMode={false}
               navigation
@@ -294,7 +310,7 @@ export default async function Services() {
                     
                       <Link className="h-[90%] mx-auto" target="_blank" href={recomm.linkedIn_profile}>
                         <FlippingImage className="h-[10em]" src_initial={recomm.profile_picture_src} alt_initial={recomm.profile_picture_alt} 
-                        src_flipped="/images/LinkedIn_icon.svg" alt_flipped="LinkedIn logo" />
+                        src_flipped="/images/social_networks/LinkedIn_icon.svg" alt_flipped="LinkedIn logo" />
                       </Link>
 
                   </div>

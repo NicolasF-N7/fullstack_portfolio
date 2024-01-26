@@ -61,8 +61,8 @@ Mapping array to easily change projects order?
 
 export const portfolio_proj_data = [
 	{
-		title: "Mon Portfolio - Freelance",
-		gist: "Site de présentation de mes services de developpement web",
+		title: "Mon Portfolio - Projet perso",
+		gist: "Mon portfolio pour présenter mes services de développement web",
 		proj_desc: "Ce site a été fait en typescript avec React-JS et Next-JS, et Tailwind-CSS pour le design de l'interface. Les animations sont faites grâce à Framer-Motion. La maquette pour l'interface utilisateur à été faite sous Figma.",
 		proj_desc: "Mon portfolio présente les services que j'offre en tant que freelance, les technologies que je maitrise, mon parcours, et biensur les projets sur lesquels j'ai travaillé par le passé.",
 		my_work: "J'ai fais ce site en typescript avec Next-JS sous React, et avec Tailwind-CSS pour le design. Les animations sont faites grâce à Framer-Motion. La maquette du design à été faite sous Figma.",
@@ -187,11 +187,11 @@ export const portfolio_proj_data = [
 		]
 	},
 	{
-		title: "NFTisation de noms de domaines",
+		title: "NFTisation de noms de domaines - MyNFT",
 		gist: "Application web de création et échange de nom de domaines sous forme de NFT et sécurisé par une blockchain",
-		proj_desc: "Cette application web est un prototype servant de preuve de concepte technique. J'ai construit le backend de celle-ci, en utilisant l'API du registrar de nom de domaine GoDaddy. Ce projet a été fait en pure javascript, avec Express",
-		my_work: "Cette application web est un prototype servant de preuve de concepte technique. J'ai construit le backend de celle-ci, en utilisant l'API du registrar de nom de domaine GoDaddy. Ce projet a été fait en pure javascript, avec Express",
-		tech_stack: ["Node-JS", "MongoDB", "Express", "EJS"],
+		proj_desc: "L'objectif de cette preuve de concept est de faciliter la circulation des noms de domaines du web classique en utilisant des NFT pour les représenter. C'est-à-dire en remplaçant la longue procédure de transfert d'un registrar à un autre par un simple transfert de NFT.",
+		my_work: "J'ai construit le backend de celle-ci, en utilisant l'API du registrar de nom de domaine GoDaddy. Ce projet a été fait en pure javascript, avec Express",
+		tech_stack: ["Node-JS", "MongoDB", "Express", "EJS", "Web3-JS"],
 		github: "",
 		screenshots: [
 			{
@@ -207,9 +207,9 @@ export const portfolio_proj_data = [
 	{ 
 		title: "Mint - MyNFT",
 		gist: "Application web de création de NFT",
-		proj_desc: "J'ai créé le module de connexion à la plupart des wallet utilisés en dans le monde des crypto monnaies. Et j'ai construit le backend avec Node-JS pour se connecter au frontend fait en pure javascript.",
-		my_work: "J'ai créé le module de connexion à la plupart des wallet utilisés en dans le monde des crypto monnaies. Et j'ai construit le backend avec Node-JS pour se connecter au frontend fait en pure javascript.",
-		tech_stack: ["Node-JS", "Solidity", "Express", "EJS"],
+		proj_desc: "Ce micro-service permet la création de NFT à partir d'une interface graphique, et en associant les métadonnées fournies par l'utilisateur à son nouveau NFT.",
+		my_work: "J'ai construit le backend avec Node-JS et Web3-JS pour se connecter au frontend que j'ai fais en pure javascript avec Express. J'ai également intégré le module de connexion à la plupart des wallet utilisés dans le monde des crypto monnaies",
+		tech_stack: ["Node-JS", "Solidity", "Express", "EJS", "Web3-JS"],
 		github: "",
 		screenshots: [
 			{
@@ -225,8 +225,8 @@ export const portfolio_proj_data = [
 	{
 		title: "Nexchange - Projet perso",
 		gist: "Marketplace prototype d'échange de NFT pour des objets de seconde main",
-		proj_desc: "J'ai créé cette application web de bout en bout avec Express et Node-JS. L'interface est faite avec le moteur de template EJS, et en javascript pure.",
-		my_work: "J'ai créé cette application web de bout en bout avec Express et Node-JS. L'interface est faite avec le moteur de template EJS, et en javascript pure.",
+		proj_desc: "Ce site d'échange de NFT était un projet pour découvrir les technologies du Web3 et des NFT. J'ai appliqué ceci à la gestion locative d'appareil életcroménager entre les parties donnant et recevant.",
+		my_work: "J'ai créé cette application web avec Express sous Node-JS. L'interface est faite avec le moteur de template EJS, et en javascript pure, HTML & CSS.",
 		tech_stack: ["Node-JS", "MongoDB", "Solidity", "Web3-JS", "Express", "EJS"],
 		github: "https://github.com/NicolasF-N7/Nexchange",
 		screenshots: [

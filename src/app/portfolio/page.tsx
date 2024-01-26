@@ -23,54 +23,52 @@ const Portfolio = ({isOpen, toggle}) => {
 
   return (
       <>
-      	<div className="mb-6">
-	        <div className="ml-10 md:ml-14">
-	        	<div className="m-4 mr-0 portfolio-swiper-container">
-	        		<Swiper
-		        		hidden={true}
-		        		className="portfolio-swiper"
-			            modules={[EffectCreative, FreeMode, Pagination, A11y, Mousewheel]}
-			            spaceBetween={50}
-			            grabCursor={true}
-			            onSwiper={handleSwiperInit}
-			            slidesPerView={1}
-			            direction='horizontal'
-			            mousewheel={{
-					          forceToAxis: true,
-					          sesntivity: 2
-					        }}
-			            freeMode={false}
-			            pagination={{ clickable: true }}
-			            effect={'creative'}
-				        	creativeEffect={{
-					        	limitProgress: 2,
-						        prev: {
-						            shadow: true,
-						            scale: 0.7,
-						            origin: 'left center',
-						            translate: ['-5%', 0, -10],
-						            rotate: [0, 0, 0],
-						        },
-						        next: {
-						          	shadow: false,
-						          	scale: 1.3,
-						            origin: 'right center',
-						            /* [x, y, z] */
-						            translate: ['200%', 0, 50],
-						            rotate: [0, 0, 0],
-						        },
-				        	}}>
+        <div className="ml-10 md:ml-14">
+        	<div className="m-4 mr-0 portfolio-swiper-container">
+        		<Swiper
+	        		hidden={true}
+	        		className="portfolio-swiper"
+		            modules={[EffectCreative, FreeMode, Pagination, A11y, Mousewheel]}
+		            spaceBetween={50}
+		            grabCursor={true}
+		            onSwiper={handleSwiperInit}
+		            slidesPerView={1}
+		            direction='horizontal'
+		            mousewheel={{
+				          forceToAxis: true,
+				          sensitivity: 0.5
+				        }}
+		            freeMode={false}
+		            pagination={{ clickable: true }}
+		            effect={'creative'}
+			        	creativeEffect={{
+				        	limitProgress: 2,
+					        prev: {
+					            shadow: true,
+					            scale: 0.7,
+					            origin: 'left center',
+					            translate: ['-5%', 0, -10],
+					            rotate: [0, 0, 0],
+					        },
+					        next: {
+					          	shadow: false,
+					          	scale: 1.3,
+					            origin: 'right center',
+					            /* [x, y, z] */
+					            translate: ['200%', 0, 50],
+					            rotate: [0, 0, 0],
+					        },
+			        	}}>
 
-			            {portfolio_proj_data.map((project, index) => (
-			              <SwiperSlide className="bg-bluePrimary rounded portfolio-slides" key={index}>
-			                <PortfolioSlide project_data={project} />
-			              </SwiperSlide>
-			            ))}
-			            
-			        </Swiper>
-	        	</div>
-	        </div>
-				</div>
+		            {portfolio_proj_data.map((project, index) => (
+		              <SwiperSlide className="bg-bluePrimary rounded portfolio-slides" key={index}>
+		                <PortfolioSlide project_data={project} />
+		              </SwiperSlide>
+		            ))}
+		            
+		        </Swiper>
+        	</div>
+        </div>
       </>
   );
 };

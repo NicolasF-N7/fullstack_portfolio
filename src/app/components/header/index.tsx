@@ -9,16 +9,14 @@ import { socials } from '@/app/contact/social-networks'
 const Header = ({isOpen, toggle}) => {
   return (
       <>
-        <header className="bg-bluePrimary text-black p-4 pl-16">
+        <header className="bg-bluePrimary text-black p-2 pl-16">
           <div className="flex flex-row justify-between">
             {/* Logo */}
-            <div className="text-xl text-black font-bold">
+            <div className="text-xl pt-2 text-black font-bold">
               <Link href="/">Nicolas Foin - Developpement Fullstack</Link>
             </div>
 
             <div className="flex flex-row">
-
-
 
               <div 
                 className="inline-block p-2 transform hover:scale-110 transition-transform duration-300 filter grayscale hover:filter-none">

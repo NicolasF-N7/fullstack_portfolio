@@ -1,15 +1,19 @@
+"use client"
 import React from "react";
 import Link from 'next/link';
 import { socials } from '@/app/contact/social-networks'
+import { usePathname } from 'next/navigation'
 
 const Footer = ({isOpen, toggle}) => {
+    const pathname = usePathname();
+
   return (
       <>
-        <footer className="bg-bluePrimary text-black">
+        <footer hidden={pathname === '/portfolio'} className="bg-bluePrimary text-black">
           <div className="p-12 pb-4">
             <div className="flex-col">
 
-              <div className="flex flex-row justify-center">
+              <div className="flex flex-row justify-center underline">
                 <div className="flex flex-col sm:flex-row">
                   <div className="mx-4 text-black mb-6 sm:mb-0">
                     <Link href="/services">Services</Link>
@@ -35,15 +39,17 @@ const Footer = ({isOpen, toggle}) => {
                 
               </div>
 
+              {/*Horizontal delimiter*/}
               <div className="mx-10 my-8 border-black border"></div>
 
-              <div className="flex justify-center">
+              <div className="flex justify-center underline">
                 <Link className="mx-4" href={socials.linkedIn}>LinkedIn</Link>
                 <Link className="mx-4" href={socials.github}>GitHub</Link>
               </div>
 
               <div className="flex justify-center">
                 <p className="mt-4 text-center">Copyrights 2024 - Foin Developpement Web</p>
+                <p className="ml-12 mt-4 text-center">Sirene: 903257194</p>
               </div>
             </div>
 

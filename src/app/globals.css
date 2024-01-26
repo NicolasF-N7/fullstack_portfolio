@@ -138,6 +138,18 @@ body {
   background-color: theme('colors.sandSecondary') !important;
 }
 
+.project-overview-section .swiper-pagination-bullet {
+  margin-top: 50px;
+  background-color: theme('colors.sandSecondary') !important;
+}
+.project-overview-section .el {
+  margin-top: 50px;
+}
+
 .swiper-zoom-container{
   cursor: zoom-in;
+}
+
+.main-content-container{
+  min-height: calc(100vh - 4rem);
 }

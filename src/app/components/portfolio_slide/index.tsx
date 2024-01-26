@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 const PortfolioSlide = ({project_data}) => {
   return (
       <>
-        <div className="flex-col p-8">
+        <div className="flex-col p-8 pb-0">
           <h2 className="text-center text-black font-bold text-xl mb-4">{project_data.title}</h2>
 
           <div className="flex items-center">
@@ -23,7 +23,7 @@ const PortfolioSlide = ({project_data}) => {
                 modules={[ Navigation, Pagination, Zoom, A11y ]}
                 spaceBetween={"25em"}
                 zoom={{
-                    maxRatio: 1.5,
+                    maxRatio: 2,
                     minRatio: 1
                 }}
                 slidesPerView={1}
@@ -47,7 +47,7 @@ const PortfolioSlide = ({project_data}) => {
 
               </div>
 
-              <div className="flex-1 px-4 mt-4 self-start">
+              <div className="flex-1 pl-4 mt-4 self-start">
 
                 <div className="py-4 px-8 pt-2 bg-expandedSection">
                   <h2 className="text-center font-bold text-xl">Le projet</h2>
