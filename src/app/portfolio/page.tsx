@@ -38,7 +38,7 @@ const Portfolio = ({isOpen, toggle}) => {
 				          forceToAxis: true,
 				          sensitivity: 0.5
 				        }}
-		            freeMode={true}
+		            freeMode={false}
 		            pagination={{ clickable: true }}
 		            effect={'creative'}
 			        	creativeEffect={{

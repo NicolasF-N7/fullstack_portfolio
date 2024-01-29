@@ -33,12 +33,14 @@ const PortfolioSlide = ({project_data}) => {
 
                 {project_data.screenshots.map((image, index) => (
                   <SwiperSlide className="swiper-slide" key={`project-screenshots-${index}`}>
-                        <div className="swiper-zoom-container h-full flex items-center pb-[10%]">
-                          <Image
-                            className="rounded m-auto slider-image"
-                            src={image.src}
-                            alt={image.alt}/>
-                        </div>
+                    <div className="h-full flex items-center pb-[10%]">
+                      <div className="swiper-zoom-container">
+                        <Image
+                          className="rounded m-auto slider-image"
+                          src={image.src}
+                          alt={image.alt}/>
+                      </div>
+                    </div>
                   </SwiperSlide>
                 ))}
               </Swiper>

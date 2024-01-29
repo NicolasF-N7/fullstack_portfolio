@@ -75,103 +75,105 @@ const Contact  = () => {
 
   return (
       <>
-        <div className="flex-col m-8 pl-10 md:pl-14 text-center">
-          <div className="ml-[5%] mr-[5%] sm:ml-[15%] sm:mr-[15%]">
-            {/*Title*/}
-            <h1 className="text-xl font-bold text-black">Écrivez-moi un petit message</h1>
+        <div className="flex justify-center h-full">
+          <div className="flex m-8 pl-10 md:pl-14  items-center justify-center h-[93%] w-[95%] text-center">
+            <div className="ml-[5%] mr-[5%] sm:ml-[0%] sm:mr-[0%] w-[75%]">
+              {/*Title*/}
+              <h1 className="text-xl font-bold text-black">Écrivez-moi un petit message</h1>
 
-            {/*Contact form*/}
-            <form onSubmit={onSubmit} noValidate className={formSent ? 'hidden' : ''}>
-              {/*Subject select*/}
-              <div className="flex mt-12">
-                <div className="text-black w-full">
-                   <CustomBorderSelect
-                      ref={subjectInputRef}
-                      {...register('subject', { required: true })}
-                      isRequired
-                      rules={{
-                        required: {
-                          value: true,
-                          message: 'J\'ai besoin de connaître la motivation de votre demande',
-                        },
-                      }}
-                      isDisabled={sendingForm}
-                      label="Objet de la demande"
-                      size="sm">
+              {/*Contact form*/}
+              <form onSubmit={onSubmit} noValidate className={formSent ? 'hidden' : ''}>
+                {/*Subject select*/}
+                <div className="flex mt-12">
+                  <div className="text-black w-full">
+                     <CustomBorderSelect
+                        ref={subjectInputRef}
+                        {...register('subject', { required: true })}
+                        isRequired
+                        rules={{
+                          required: {
+                            value: true,
+                            message: 'J\'ai besoin de connaître la motivation de votre demande',
+                          },
+                        }}
+                        isDisabled={sendingForm}
+                        label="Objet de la demande"
+                        size="sm">
 
-                      {subjects.map((subject, index) => (
-                        <SelectItem  key={subject.title} color="primary" value={subject.title}>
-                          {subject.title}
-                        </SelectItem>
-                      ))}
-                    </CustomBorderSelect>
+                        {subjects.map((subject, index) => (
+                          <SelectItem  key={subject.title} color="primary" value={subject.title}>
+                            {subject.title}
+                          </SelectItem>
+                        ))}
+                      </CustomBorderSelect>
+                  </div>
                 </div>
+
+                {/*Email and phone inputs*/}
+                <div className="mt-8 flex flex-row">
+                  <CustomBorderInput
+                    className="mr-8"
+                    isRequired
+                    rules={{required: {value: true}}}
+                    {...register('email', { required: true })}
+                    isDisabled={sendingForm}
+                    label="E-mail"/>
+
+                  <CustomBorderInput 
+                    isRequired
+                    rules={{required: {value: true}}}
+                    {...register('telephone', { required: true })}
+                    isDisabled={sendingForm}
+                    label="Téléphone"/>
+                </div>
+
+                {/*Preferred channel*/}
+                <div className="mt-8 flex flex-row w-full">
+                  <RadioGroup
+                    isRequired
+                    rules={{required: {value: true}}}
+                    {...register('canal', { required: true })}
+                    isDisabled={sendingForm}
+                    label="Moyen de communication préféré:"
+                    orientation="horizontal"
+                    color="warning"
+                    defaultValue="phone">
+                    <Radio value="phone">Téléphone</Radio>
+                    <Radio value="email">E-mail</Radio>
+                  </RadioGroup>
+                </div>
+
+                {/*Message area*/}
+                <div className="mt-8 w-full">
+                  <CustomBorderTextArea 
+                    isRequired
+                    rules={{required: {value: true}}}
+                    {...register('message', { required: true })}
+                    isDisabled={sendingForm}
+                    label="Votre message"/>
+                </div>
+
+                {/*Send button*/}
+                <div className="mt-8 mb-8 w-full">
+                  <Button type="submit" isDisabled={sendingForm} isLoading={sendingForm && !showErrorMessage} color={showErrorMessage ? "danger" : "default"} className="px-16 py-6" variant="bordered" radius="none">Envoyer !</Button>
+                </div>
+              </form>
+
+              {/*Success message*/}
+              <div className={`${formSent ? '' : 'hidden'} relative my-16`}>
+                <h1 className="text-md font-bold text-brownTertiary">{serverResponseText}</h1>
+                <div className="mt-4 absolute w-full h-1 bg-lightBrown"></div>
               </div>
 
-              {/*Email and phone inputs*/}
-              <div className="mt-8 flex flex-row">
-                <CustomBorderInput
-                  className="mr-8"
-                  isRequired
-                  rules={{required: {value: true}}}
-                  {...register('email', { required: true })}
-                  isDisabled={sendingForm}
-                  label="E-mail"/>
-
-                <CustomBorderInput 
-                  isRequired
-                  rules={{required: {value: true}}}
-                  {...register('telephone', { required: true })}
-                  isDisabled={sendingForm}
-                  label="Téléphone"/>
+              {/*Error message*/}
+              
+              <div className={`${showErrorMessage ? '' : 'hidden'} relative my-16`}>
+                <h1 className="text-md font-bold text-redAccent">{errorMessage}</h1>
+                <div className="mt-4 absolute w-full h-1 bg-redAccent"></div>
               </div>
-
-              {/*Preferred channel*/}
-              <div className="mt-8 flex flex-row w-full">
-                <RadioGroup
-                  isRequired
-                  rules={{required: {value: true}}}
-                  {...register('canal', { required: true })}
-                  isDisabled={sendingForm}
-                  label="Moyen de communication préféré:"
-                  orientation="horizontal"
-                  color="warning"
-                  defaultValue="phone">
-                  <Radio value="phone">Téléphone</Radio>
-                  <Radio value="email">E-mail</Radio>
-                </RadioGroup>
-              </div>
-
-              {/*Message area*/}
-              <div className="mt-8 w-full">
-                <CustomBorderTextArea 
-                  isRequired
-                  rules={{required: {value: true}}}
-                  {...register('message', { required: true })}
-                  isDisabled={sendingForm}
-                  label="Votre message"/>
-              </div>
-
-              {/*Send button*/}
-              <div className="mt-8 w-full">
-                <Button type="submit" isDisabled={sendingForm} isLoading={sendingForm && !showErrorMessage} color={showErrorMessage ? "danger" : "default"} className="px-16 py-6" variant="bordered" radius="none">Envoyer !</Button>
-              </div>
-            </form>
-
-            {/*Success message*/}
-            <div className={`${formSent ? '' : 'hidden'} relative my-16`}>
-              <h1 className="text-md font-bold text-brownTertiary">{serverResponseText}</h1>
-              <div className="mt-4 absolute w-full h-1 bg-lightBrown"></div>
-            </div>
-
-            {/*Error message*/}
-            
-            <div className={`${showErrorMessage ? '' : 'hidden'} relative my-16`}>
-              <h1 className="text-md font-bold text-redAccent">{errorMessage}</h1>
-              <div className="mt-4 absolute w-full h-1 bg-redAccent"></div>
             </div>
           </div>
-        </div>
+          </div>
       </>
   );
 };
