@@ -38,7 +38,7 @@ const Portfolio = ({isOpen, toggle}) => {
 				          forceToAxis: true,
 				          sensitivity: 0.5
 				        }}
-		            freeMode={false}
+		            freeMode={true}
 		            pagination={{ clickable: true }}
 		            effect={'creative'}
 			        	creativeEffect={{
@@ -61,7 +61,7 @@ const Portfolio = ({isOpen, toggle}) => {
 			        	}}>
 
 		            {portfolio_proj_data.map((project, index) => (
-		              <SwiperSlide className="bg-bluePrimary rounded portfolio-slides" key={index}>
+		              <SwiperSlide className="bg-bluePrimary rounded portfolio-slides" key={`portfolio-project-${index}`}>
 		                <PortfolioSlide project_data={project} />
 		              </SwiperSlide>
 		            ))}

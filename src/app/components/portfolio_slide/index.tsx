@@ -12,12 +12,11 @@ import 'swiper/css/pagination';
 const PortfolioSlide = ({project_data}) => {
   return (
       <>
-        <div className="flex-col p-8 pb-0">
+        <div className="flex-col p-8 pb-0 h-full">
           <h2 className="text-center text-black font-bold text-xl mb-4">{project_data.title}</h2>
 
-          <div className="flex items-center">
-            <div className="flex-1 slide-swiper-container">
-
+          <div className="flex items-center h-[90%]">
+            <div className="flex-1 slide-swiper-container self-center">
               <Swiper
                 className="slide-swiper"
                 modules={[ Navigation, Pagination, Zoom, A11y ]}
@@ -33,8 +32,8 @@ const PortfolioSlide = ({project_data}) => {
 
 
                 {project_data.screenshots.map((image, index) => (
-                  <SwiperSlide className="swiper-slide" key={index}>
-                        <div className="swiper-zoom-container">
+                  <SwiperSlide className="swiper-slide" key={`project-screenshots-${index}`}>
+                        <div className="swiper-zoom-container h-full flex items-center pb-[10%]">
                           <Image
                             className="rounded m-auto slider-image"
                             src={image.src}
@@ -43,18 +42,16 @@ const PortfolioSlide = ({project_data}) => {
                   </SwiperSlide>
                 ))}
               </Swiper>
+            </div>
 
-
-              </div>
-
-              <div className="flex-1 pl-4 mt-4 self-start">
+              <div className="flex-1 pl-4 mt-4 self-center pb-[5%]">
 
                 <div className="py-4 px-8 pt-2 bg-expandedSection">
                   <h2 className="text-center font-bold text-xl">Le projet</h2>
                   <p>{project_data.proj_desc}</p>
                 </div>
 
-                <div className="py-4 px-8 pt-2 mt-4 bg-expandedSection">
+                <div className="py-4 px-8 pt-2 my-[3vh] bg-expandedSection">
                   <h2 className="text-center font-bold text-xl">Comment c'est fait</h2>
                   <p>{project_data.my_work}</p> 
                 </div>
