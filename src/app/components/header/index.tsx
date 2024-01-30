@@ -6,7 +6,7 @@ import linkedin_logo from '/public/images/social_networks/linkedin-ovale-sand-li
 import github_logo from '/public/images/social_networks/github-full-white-sand-light-contrast.webp'
 import { socials } from '@/app/contact/social-networks'
 
-const Header = ({isOpen, toggle}) => {
+const Header = () => {
   return (
       <>
         <header className="bg-bluePrimary text-black p-2 pl-16">

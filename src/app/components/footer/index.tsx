@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { socials } from '@/app/contact/social-networks'
 import { usePathname } from 'next/navigation'
 
-const Footer = ({isOpen, toggle}) => {
+const Footer = () => {
     const pathname = usePathname();
 
   return (

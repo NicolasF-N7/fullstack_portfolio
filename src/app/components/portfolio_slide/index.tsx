@@ -4,12 +4,14 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Zoom, A11y } from 'swiper/modules';
 import github_logo from '/public/images/social_networks/github-full-white-sand-light-contrast.webp'
+import type {ProjectDataType} from '@/app/portfolio/projectDataType';
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const PortfolioSlide = ({project_data}) => {
+const PortfolioSlide = ({project_data} : {project_data: ProjectDataType}) => {
   return (
       <>
         <div className="flex-col p-8 pb-0 h-full">

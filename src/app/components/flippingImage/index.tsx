@@ -2,8 +2,14 @@ import { useState } from 'react';
 import Image from "next/image";
 import {motion, useAnimation} from "framer-motion"
 
+type StaticImageData = {
+    src: string
+    height: number
+    width: number
+  };
 
-const FlippingImage = ({src_initial, alt_initial, src_flipped, alt_flipped}) => {
+const FlippingImage = ({src_initial,alt_initial,src_flipped,alt_flipped}: 
+  {src_initial: StaticImageData;alt_initial: string;src_flipped: StaticImageData;alt_flipped: string;}) => {
   const mainImgControls = useAnimation();
   const flippedImgControls = useAnimation();
   const [isHovered, setHovered] = useState(false);

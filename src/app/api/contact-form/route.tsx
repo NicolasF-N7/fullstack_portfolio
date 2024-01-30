@@ -2,8 +2,11 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { transporter, mailOptions } from "./nodemailer_config"
 import { MongoClient } from 'mongodb';
 import React from 'react';
+import type {FormData} from '@/app/contact/formDataType';
+import {NextResponse, NextRequest} from 'next/server'
 
-const saveDataToDb = async function(data){
+
+const saveDataToDb = async function(data : FormData){
 	const uri = 'mongodb://localhost:27017/your-database-name';
 	const client = new MongoClient(uri);
 
@@ -21,7 +24,8 @@ const saveDataToDb = async function(data){
   }
 }
 
-export async function POST(req: NextRequest, res: NextResponse) {
+
+export async function POST(req: NextRequest, res: NextApiResponse<FormData>) {
 	const data = await req.json()
 
 	if(!data.subject || !data.email || !data.message){

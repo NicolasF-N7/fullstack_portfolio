@@ -23,8 +23,8 @@ export const CustomBorderTextArea = extendVariants(Textarea, {
     color: "stone",
     radius: "none",
     textSize: "base",
-    removeLabel: true,
+    removeLabel: "true",
     labelPlacement: "inside",
-    disableAnimation: false,
+    disableAnimation: "false",
   },
 });

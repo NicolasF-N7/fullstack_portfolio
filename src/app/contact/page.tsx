@@ -1,10 +1,10 @@
 "use client"
 import React from "react";
 import { useState, useRef } from "react";
+import { FormEvent } from 'react'
 import { useForm } from 'react-hook-form'
 import Link from 'next/link';
 import { subjects } from './subjects';
-import { sendContactRequest } from '@/app/actions';
 import { CustomBorderInput } from './customInput';
 import { CustomBorderSelect } from './customSelect';
 import { CustomBorderTextArea } from './customTextArea';
@@ -16,14 +16,8 @@ import {extendVariants, Select, SelectSection, SelectItem} from "@nextui-org/rea
 import {Input} from "@nextui-org/react";
 import {RadioGroup, Radio} from "@nextui-org/react";
 import {Textarea} from "@nextui-org/react";
+import type {FormData} from '@/app/contact/formDataType';
 
-export type FormData = {
-  objet: string;
-  email: string;
-  telephone: string;
-  canal: string;
-  message: string;
-};
 
 /*
 Need useForm to register reach form field to the global form.
@@ -33,7 +27,6 @@ So instead, use <form onSubmit={onSubmit}>, and onSubmit is triggered, wiiiiith 
 
 const Contact  = () => {
   const { register } = useForm();
-  const subjectInputRef = useRef(null);//USELESS?
   //True when the response from the server is received, and is 200 OK
   const [formSent, setFormSent] = useState(false);
   //State = true if form is being sent and we're waiting for the response. False otherwise
@@ -41,7 +34,7 @@ const Contact  = () => {
   const [serverResponseText, setServerResponseText] = useState(false);
   //Handle form error message
   const [showErrorMessage, setShowErrorMessage] = useState(false);
-  const [errorMessage, setErrorMessage] = useState();
+  const [errorMessage, setErrorMessage] = useState("");
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) =>{
     event.preventDefault();
@@ -88,15 +81,8 @@ const Contact  = () => {
                 <div className="flex mt-12">
                   <div className="text-black w-full">
                      <CustomBorderSelect
-                        ref={subjectInputRef}
                         {...register('subject', { required: true })}
                         isRequired
-                        rules={{
-                          required: {
-                            value: true,
-                            message: 'J\'ai besoin de connaître la motivation de votre demande',
-                          },
-                        }}
                         isDisabled={sendingForm}
                         label="Objet de la demande"
                         size="sm">
@@ -115,14 +101,12 @@ const Contact  = () => {
                   <CustomBorderInput
                     className="mr-8"
                     isRequired
-                    rules={{required: {value: true}}}
                     {...register('email', { required: true })}
                     isDisabled={sendingForm}
                     label="E-mail"/>
 
                   <CustomBorderInput 
                     isRequired
-                    rules={{required: {value: true}}}
                     {...register('telephone', { required: true })}
                     isDisabled={sendingForm}
                     label="Téléphone"/>
@@ -132,7 +116,6 @@ const Contact  = () => {
                 <div className="mt-8 flex flex-row w-full">
                   <RadioGroup
                     isRequired
-                    rules={{required: {value: true}}}
                     {...register('canal', { required: true })}
                     isDisabled={sendingForm}
                     label="Moyen de communication préféré:"
@@ -148,7 +131,6 @@ const Contact  = () => {
                 <div className="mt-8 w-full">
                   <CustomBorderTextArea 
                     isRequired
-                    rules={{required: {value: true}}}
                     {...register('message', { required: true })}
                     isDisabled={sendingForm}
                     label="Votre message"/>
