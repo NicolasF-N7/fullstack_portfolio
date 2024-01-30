@@ -16,6 +16,11 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/effect-creative';
 
 const Portfolio = () => {
+
+  const handleSwiperInit = (swiper: typeof Swiper) => {
+    swiper.snapGrid = swiper.slidesGrid.slice(0);
+  };
+
   return (
       <>
         <div className="ml-10 md:ml-14">
@@ -26,6 +31,7 @@ const Portfolio = () => {
 		            modules={[EffectCreative, FreeMode, Pagination, A11y, Mousewheel]}
 		            spaceBetween={50}
 		            grabCursor={true}
+		            onSwiper={handleSwiperInit}
 		            slidesPerView={1}
 		            direction='horizontal'
 		            mousewheel={{
