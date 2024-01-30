@@ -10,6 +10,7 @@ const Header = ({isOpen, toggle}) => {
   return (
       <>
         <header className="bg-bluePrimary text-black p-2 pl-16">
+          <link rel="icon" href="/favicon.ico" />
           <div className="flex flex-row justify-between">
             {/* Logo */}
             <div className="text-xl pt-2 text-black font-bold">

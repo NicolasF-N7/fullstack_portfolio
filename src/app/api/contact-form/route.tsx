@@ -40,7 +40,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
 		});
 		console.log(data.email +  " sent a form about '" + data.subject + "'");
 		await saveDataToDb(data);
-		return new Response(JSON.stringify({ message: 'Super ! Le message a bien été reçu.' }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+		return new Response(JSON.stringify({ message: 'Super ! J\'ai bien reçu le message. Je vous réponds très vite.' }), { status: 200, headers: { 'Content-Type': 'application/json' } });
 	}catch(err){
 		console.log(err);
 		return new Response(JSON.stringify({ message: 'Oh non ! Le message n\'est pas parti.' }), { status: 400, headers: { 'Content-Type': 'application/json' } });

@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 import {nextui} from "@nextui-org/react";
 
+// Dark blue: #008799
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',

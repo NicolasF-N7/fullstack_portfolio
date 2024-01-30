@@ -1,9 +1,10 @@
 import nodemailer from "nodemailer";
 
 const email = process.env.EMAIL;
+const emailPerso = process.env.EMAIL_PERSO;
 const pass = process.env.EMAIL_PASS;
 
-export const transporter = nodemailer.createTransport({
+export const gmailtransporter = nodemailer.createTransport({
 	service: "gmail",
 	auth: {
 		user: email,
@@ -11,7 +12,10 @@ export const transporter = nodemailer.createTransport({
 	}
 });
 
+console.log(`smtp://` + email + `:` + pass + `@cloud3.googiehost.com:587`)
+export const transporter = nodemailer.createTransport(`smtp://` + email + `:` + pass + `@cloud3.googiehost.com:587`);
+
 export const mailOptions = {
 	from: email,
-	to: email
+	to: emailPerso
 }

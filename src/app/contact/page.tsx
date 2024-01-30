@@ -78,11 +78,12 @@ const Contact  = () => {
         <div className="flex justify-center h-full">
           <div className="flex m-8 pl-10 md:pl-14  items-center justify-center h-[93%] w-[95%] text-center">
             <div className="ml-[5%] mr-[5%] sm:ml-[0%] sm:mr-[0%] w-[75%]">
-              {/*Title*/}
-              <h1 className="text-xl font-bold text-black">Écrivez-moi un petit message</h1>
 
               {/*Contact form*/}
               <form onSubmit={onSubmit} noValidate className={formSent ? 'hidden' : ''}>
+                {/*Title*/}
+                <h1 className="text-xl font-bold text-black">Écrivez-moi un petit message</h1>
+
                 {/*Subject select*/}
                 <div className="flex mt-12">
                   <div className="text-black w-full">
