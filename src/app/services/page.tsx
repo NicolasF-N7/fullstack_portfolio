@@ -11,6 +11,8 @@ import { recommendations } from '@/app/services/recommendations'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Pagination, Grid, A11y, Mousewheel } from 'swiper/modules';
 import { Button } from "@nextui-org/react";
+import LinkedInLogo from "/public/images/social_networks/LinkedIn_icon.svg"
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -130,7 +132,7 @@ export default async function Services() {
             spaceBetween={30}
             grid={{
               rows: 2,
-              fill: 'rows'
+              fill: 'row'
             }}
             breakpoints={{
               768: {
@@ -199,7 +201,7 @@ export default async function Services() {
               spaceBetween={30}
               grid={{
                 rows: 2,
-                fill: 'columns'
+                fill: 'row'
               }}
               breakpoints={{
                 768: {
@@ -283,7 +285,7 @@ export default async function Services() {
               spaceBetween={30}
               grid={{
                 rows: 2,
-                fill: 'columns'
+                fill: 'row'
               }}
               breakpoints={{
                 768: {
@@ -306,11 +308,13 @@ export default async function Services() {
               {recommendations.map((recomm, index) => (
                 <SwiperSlide key={`recommendation-portrait-${index}`}>
 
-                  <div className="h-[10em] flex justify-center items-center rounded-tl-lg rounded-br-lg bg-expandedSection overflow-hidden">
+                  <div className="flex justify-center items-center rounded-tl-lg rounded-br-lg bg-expandedSection overflow-hidden">
                     
-                      <Link className="h-[90%] mx-auto" target="_blank" href={recomm.linkedIn_profile}>
-                        <FlippingImage className="h-[10em]" src_initial={recomm.profile_picture_src} alt_initial={recomm.profile_picture_alt} 
-                        src_flipped="/images/social_networks/LinkedIn_icon.svg" alt_flipped="LinkedIn logo" />
+                      <Link className="mx-auto " target="_blank" href={recomm.linkedIn_profile}>
+                        <div className="h-[12em] py-4">
+                          <FlippingImage src_initial={recomm.profile_picture_src} alt_initial={recomm.profile_picture_alt} 
+                          src_flipped={LinkedInLogo} alt_flipped="LinkedIn logo" />
+                        </div>
                       </Link>
 
                   </div>

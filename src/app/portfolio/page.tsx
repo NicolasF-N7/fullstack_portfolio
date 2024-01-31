@@ -6,7 +6,7 @@ import Image from "next/image";
 import { portfolio_proj_data } from '@/app/portfolio/projects_data'
 import ExpandableSection from '@/app/components/expandableSection'
 import PortfolioSlide from '@/app/components/portfolio_slide'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, SwiperRef, SwiperClass } from 'swiper/react';
 import SwiperCore, { FreeMode, Navigation, Pagination, A11y, Mousewheel, EffectCreative } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
@@ -15,11 +15,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/effect-creative';
 
-const Portfolio = () => {
 
-  const handleSwiperInit = (swiper: typeof Swiper) => {
-    swiper.snapGrid = swiper.slidesGrid.slice(0);
-  };
+const Portfolio = () => {
 
   return (
       <>
@@ -31,7 +28,6 @@ const Portfolio = () => {
 		            modules={[EffectCreative, FreeMode, Pagination, A11y, Mousewheel]}
 		            spaceBetween={50}
 		            grabCursor={true}
-		            onSwiper={handleSwiperInit}
 		            slidesPerView={1}
 		            direction='horizontal'
 		            mousewheel={{
