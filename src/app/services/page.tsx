@@ -310,7 +310,7 @@ export default async function Services() {
 
                   <div className="flex justify-center items-center rounded-tl-lg rounded-br-lg bg-expandedSection overflow-hidden">
                     
-                      <Link className="mx-auto " target="_blank" href={recomm.linkedIn_profile}>
+                      <Link className="mx-auto" target="_blank" href={recomm.linkedIn_profile}>
                         <div className="h-[12em] py-4">
                           <FlippingImage src_initial={recomm.profile_picture_src} alt_initial={recomm.profile_picture_alt} 
                           src_flipped={LinkedInLogo} alt_flipped="LinkedIn logo" />

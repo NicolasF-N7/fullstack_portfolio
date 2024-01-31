@@ -2,6 +2,10 @@ import Image from 'next/image'
 import { useState } from 'react';
 import Link from 'next/link';
 
+import { Amplify } from 'aws-amplify';
+import amplifyconfig from './src/amplifyconfiguration.json';
+Amplify.configure(amplifyconfig);
+
 export default function Home() {
   return (
     <main className="sm:ml-14 ml-10">

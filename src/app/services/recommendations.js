@@ -31,6 +31,6 @@ export const recommendations = [
 		profile_picture_src: edouardProfilePict,
 		profile_picture_alt: "Profile picture of Edouard Bessire",
 		linkedIn_profile: "https://www.linkedin.com/in/edouardbessire/",
-		text: "Nicolas was able to quicky learned and adapt to our team's way of working and new technologies, and was a good asset to the team. The two different projects he worked on were delivered as expected, and he had good communication. Would recommend!"
+		text: "Nicolas was able to quickly learn and adapt to our team's way of working and new technologies, and was a good asset to the team. The two different projects he worked on were delivered as expected, and he had good communication. Would recommend!"
 	}
 ]
