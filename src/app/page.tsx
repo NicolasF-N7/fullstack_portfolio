@@ -2,9 +2,9 @@ import Image from 'next/image'
 import { useState } from 'react';
 import Link from 'next/link';
 
-/*import { Amplify } from 'aws-amplify';
+import { Amplify } from 'aws-amplify';
 import amplifyconfig from '/amplifyconfiguration.json';
-Amplify.configure(amplifyconfig);*/
+Amplify.configure(amplifyconfig);
 
 export default function Home() {
   return (
