@@ -12,7 +12,6 @@ export const gmailtransporter = nodemailer.createTransport({
 	}
 });
 
-console.log(`smtp://` + email + `:` + pass + `@cloud3.googiehost.com:587`)
 export const transporter = nodemailer.createTransport(`smtp://` + email + `:` + pass + `@cloud3.googiehost.com:587`);
 
 export const mailOptions = {
