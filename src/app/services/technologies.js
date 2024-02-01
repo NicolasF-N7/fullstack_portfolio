@@ -25,16 +25,16 @@ export const technologies_logo = [
 	{
 		src: tailwind_css_logo,
 		alt: "Tailwind css logo",
-		description: "Tailwind-CSS permet de totalement personnaliser le design d'un site, et de l'adapter à toutes les tailles d'écran (Responsive)."
+		description: "Tailwind-CSS permet de personnaliser totalement le design d'un site, et de l'adapter à toutes les tailles d'écran (Responsive)."
 	},
 	{
 		src: framer_motion_logo,
 		alt: "Framer motion logo",
-		description: "Framer motion est ce qui ajoute la touche de dynamisme à un site : transitions, animations, et autres effets."
+		description: "Framer motion permet d'ajouter une touche de dynamisme à un site : transitions, animations, et autres effets."
 	},
 	{
 		src: swiper_js_logo,
 		alt: "Swiper JS logo",
-		description: "Swiper-JS est un module pour créer des animations 2D et 3D de bandes déroulantes avec une personnalisation très poussée."
+		description: "Swiper-JS permet de créer des animations 2D et 3D de bandes déroulantes avec une personnalisation très poussée."
 	}
 ]

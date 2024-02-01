@@ -62,7 +62,7 @@ export const portfolio_proj_data = [
 	{
 		title: "Mon Portfolio - Projet perso",
 		gist: "Mon portfolio pour présenter mes services de développement web",
-		proj_desc: "Ce site a été fait en typescript avec React-JS et Next-JS, et Tailwind-CSS pour le design de l'interface. Les animations sont faites grâce à Framer-Motion. La maquette pour l'interface utilisateur à été faite sous Figma.",
+		proj_desc: "Ce site a été fait en typescript avec React-JS et Next-JS, et Tailwind-CSS pour le design de l'interface. Les animations sont faites grâce à Framer-Motion. La maquette pour l'interface utilisateur a été faite sous Figma.",
 		proj_desc: "Mon portfolio présente les services que j'offre en tant que freelance, les technologies que je maitrise, mon parcours, et biensur les projets sur lesquels j'ai travaillé par le passé.",
 		my_work: "J'ai fais ce site en typescript avec Next-JS sous React, et avec Tailwind-CSS pour le design. Les animations sont faites grâce à Framer-Motion. La maquette du design à été faite sous Figma.",
 		tech_stack: ["React-JS", "Tailwind-CSS", "Framer-Motion", "Figma"],
@@ -101,20 +101,20 @@ export const portfolio_proj_data = [
 		],
 	},
 	{ 
-		title: "Extracteur de prix LeBonCoin - Projet perso",
-		gist: "Extension chrome agrégeant les prix des annonces d'une recherche sur LeBonCoin sous format excel",
-		proj_desc: "Cette extension chrome permet d'obtenir des informations d'annonces LeBonCoin sous un format exploitable. Un cas d'utilisation est de déterminer le prix moyen d'un modèle de moto, pour pouvoir repérer plus facilement les annonces qui ont un prix inférieur au marché.",
-		my_work: "Elle a été faite en pure javascript. Elle viens récupérer les données de LeBonCoin directement sur la page des résultats d'une recherche par l'utilisateur.",
+		title: "Extracteur de prix Le Bon Coin - Projet perso",
+		gist: "Extension chrome agrégeant les prix des annonces d'une recherche sur Le Bon Coin sous format excel",
+		proj_desc: "Cette extension chrome permet d'obtenir des informations d'annonces Le Bon Coin sous un format exploitable. Un cas d'utilisation est de déterminer le prix moyen d'un modèle de moto, pour pouvoir repérer plus facilement les annonces qui ont un prix inférieur au marché.",
+		my_work: "Elle a été faite en pure javascript. Elle viens récupérer les données de Le Bon Coin directement sur la page des résultats d'une recherche par l'utilisateur.",
 		tech_stack: ["Javascript"],
 		github: "https://github.com/NicolasF-N7/LBC_price_extractor_extension",
 		screenshots: [
 			{
 				src: lbcExtractor,
-				alt: "LeBonCoin page which data are extracted from"
+				alt: "Le Bon Coin page which data are extracted from"
 			},
 			{
 				src: lbcExtractorResult,
-				alt: "LeBonCoin prices extracted result under csv format"
+				alt: "Le Bon Coin prices extracted result under csv format"
 			}
 		]
 	},
@@ -220,7 +220,7 @@ export const portfolio_proj_data = [
 	{
 		title: "Nexchange - Projet perso",
 		gist: "Marketplace prototype d'échange de NFT pour des objets de seconde main",
-		proj_desc: "Ce site d'échange de NFT était un projet pour découvrir les technologies du Web3 et des NFT. J'ai appliqué ceci à la gestion locative d'appareil életcroménager entre les parties donnant et recevant.",
+		proj_desc: "Ce site d'échange de NFT était un projet pour découvrir les technologies du Web3 et des NFT. J'ai appliqué ceci à la gestion locative d'appareil électroménager.",
 		my_work: "J'ai créé cette application web avec Express sous Node-JS. L'interface est faite avec le moteur de template EJS, et en javascript pure, HTML & CSS.",
 		tech_stack: ["Node-JS", "MongoDB", "Solidity", "Web3-JS", "Express", "EJS"],
 		github: "https://github.com/NicolasF-N7/Nexchange",

@@ -103,20 +103,20 @@ export default async function Services() {
       {/*______Services______*/}
       <ExpandableSection title="Site vitrine">
         {/* Content for Section 1 */}
-        <p className="whitespace-pre-wrap">    Je crée des sites vitrine avec le CMS Wordpress pour gérer l'administration de données et le backend. Selon la personnalisation souhaitée et le budget, je peux réaliser la partie interface utilisateur avec React, ou bien avec l’éditeur de thème Elementor.
-        <br/>    Il me faut les maquettes graphiques de chaque page pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi-même sur Figma.</p>
+        <p className="whitespace-pre-wrap">Je crée des sites vitrine avec le CMS Wordpress pour gérer l'administration de données et le backend. Selon la personnalisation souhaitée et le budget, je peux réaliser la partie interface utilisateur avec React, ou bien avec l’éditeur de thème Elementor.
+        <br/></p>
       </ExpandableSection>
 
       <ExpandableSection title="E-commerce">
         {/* Content for Section 1 */}
-        <p className="whitespace-pre-wrap">    J’utilise Shopify pour créer les sites ecommerce. Selon votre budget, je peux créer l’interface utilisateur totalement personnalisée en React, ou bien utiliser l’éditeur de thème intégré à Shopify.
-        <br/>    Il me faut les maquettes graphiques de chaque page pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi-même sur Figma.</p>
+        <p className="whitespace-pre-wrap">J’utilise Shopify pour créer les sites ecommerce. Selon votre budget, je peux créer l’interface utilisateur totalement personnalisée en React, ou bien utiliser l’éditeur de thème intégré à Shopify.
+        <br/></p>
       </ExpandableSection>
 
       <ExpandableSection title="Application web">
         {/* Content for Section 1 */}
-        <p className="whitespace-pre-wrap">    Pour la création de SaaS et autres applications web nécessitant des fonctionnalités sur-mesures, j’utilise React pour faire l’interface utilisateur, et NodeJS pour créer un backend léger et rapide.
-        <br/>    Il me faut les maquettes graphiques de chaque page pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi-même sur Figma.</p>
+        <p className="whitespace-pre-wrap">Pour la création de SaaS et autres applications web nécessitant des fonctionnalités sur-mesures, j’utilise React pour faire l’interface utilisateur, et NodeJS pour créer un backend léger et rapide.
+        <br/></p>
       </ExpandableSection>
       {/*______Services______*/}
 

@@ -60,7 +60,7 @@ const About = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}>
 
-              <p className="whitespace-pre-wrap">    Au cours de mes presque <span className="font-bold">2 années d'expérience</span>, j'ai entre autres développé mon-savoir faire en développement web en travaillant sur des projets innovants, notamment chez <Link className="text-lightBrown underline italic" target="_blank" href="https://mynft.com/">MyNFT</Link> en participant à l'élaboration d'un site d'échange de NFT et plusieurs produits associés.
+              <p className="whitespace-pre-wrap">    À travers mon expérience, j'ai entre autres développé mon-savoir faire en développement web en travaillant sur des projets innovants, notamment chez <Link className="text-lightBrown underline italic" target="_blank" href="https://mynft.com/">MyNFT</Link> en participant à l'élaboration d'un site d'échange de NFT et plusieurs produits associés.
               <br/>    Puis chez <Link className="text-lightBrown underline italic" target="_blank" href="https://www.oly-platform.com/">Oly Patform</Link> en prototypant l'automatisation de l'aquisition de données pour leur logiciel de vente de vêtements de seconde main sur une multitude de places de marché.
               <br/>    Et également chez <Link className="text-lightBrown underline italic" target="_blank" href="https://www.protenga.com/">Protenga</Link>, qui crée des fermes d'élevage d'insectes high tech, en améliorant un système de comptage d'insectes.
               </p>

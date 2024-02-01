@@ -49,7 +49,7 @@ const Footer = () => {
 
               <div className="flex justify-center">
                 <p className="mt-4 text-center">Foin Developpement Web Copyrights 2024 - Tous droits réservés </p>
-                <p className="ml-12 mt-4 text-center">Sirene: 903257194</p>
+                <p className="ml-12 mt-4 text-center">SIREN: 903257194</p>
               </div>
             </div>
 
