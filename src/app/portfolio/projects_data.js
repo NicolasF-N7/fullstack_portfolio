@@ -22,7 +22,6 @@ import domainTokMint from '/public/images/projects_media/mynft-domain-tokenizati
 import domainTokEditDNS from '/public/images/projects_media/mynft-domain-tokenization/dns-edit-w720.png'
 
 import islaPriceScraper from '/public/images/projects_media/isla-price-scraper/price-scraper-w720.png'
-import islaScraperRunning from '/public/images/projects_media/isla-price-scraper/running-w720.png'
 import islaScraperResult from '/public/images/projects_media/isla-price-scraper/result-w720.png'
 
 import islaPopularityScraper from '/public/images/projects_media/isla-popularity/vc-w720.png'
@@ -148,10 +147,6 @@ export const portfolio_proj_data = [
 			{
 				src: islaPriceScraper,
 				alt: "Web application to scrape prices from second hand garments on several marketplaces"
-			},
-			{
-				src: islaScraperRunning,
-				alt: "Web app's Scraper running"
 			},
 			{
 				src: islaScraperResult,
