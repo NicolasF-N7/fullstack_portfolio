@@ -8,8 +8,11 @@ const mongodbPass = process.env.MONGODB_PASS;
 
 const saveDataToDb = async function(data : FormData){
 	const uri = "mongodb+srv://contact:" + mongodbPass + "@portfolio-contact-form.sludqiu.mongodb.net/?retryWrites=true&w=majority";
-	console.log(uri);
 	const client = new MongoClient(uri);
+
+	const timeStampedForm = {...data};
+	timeStampedForm.timestamp = (new Date()).toLocaleString("en-US", { timeZone: "Europe/Paris" });
+	console.log("Time: " + timeStampedForm.timestamp);
 
 	try {
     // Connect to the MongoDB client
@@ -18,7 +21,7 @@ const saveDataToDb = async function(data : FormData){
     const collection = database.collection('forms');
 
     // Insert data into the collection
-    const result = await collection.insertOne(data);
+    const result = await collection.insertOne(timeStampedForm);
   }catch (err){
   	console.log("Error while connecting to DB: " + err);
   }finally {
@@ -37,8 +40,9 @@ export async function POST(req: NextRequest, res: NextApiResponse<FormData>) {
 		return new Response('Bizarre... la requête ne contient pas toutes les informations.', {status: 400});
 	}
 
-	/* SEND EMAIL */
+	
 	try{
+		/* SEND EMAIL */
 		await transporter.sendMail({
 			...mailOptions,
 			subject: "Request from portfolio: \"" + data.subject + "\", from " + data.email,
@@ -46,6 +50,8 @@ export async function POST(req: NextRequest, res: NextApiResponse<FormData>) {
 
 		});
 		console.log(data.email +  " sent a form about '" + data.subject + "'");
+		
+		/* SAVE FORM TO DB */
 		await saveDataToDb(data);
 		console.log("Form registered to db")
 		return new Response(JSON.stringify({ message: 'Super ! J\'ai bien reçu le message. Je vous réponds très vite.' }), { status: 200, headers: { 'Content-Type': 'application/json' } });
