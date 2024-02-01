@@ -26,6 +26,7 @@ export default function Home() {
           Enfin, pour m'écrire allez sur <Link href="/contact" className="font-bold underline">contact</Link>.
           <br/>
           <br/>
+          <br/>
           Bonne visite !
         </div>
 
