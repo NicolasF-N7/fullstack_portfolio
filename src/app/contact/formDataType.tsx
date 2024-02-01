@@ -4,4 +4,5 @@ export type FormData = {
   telephone: string;
   canal: string;
   message: string;
+  timestamp: string;
 };
