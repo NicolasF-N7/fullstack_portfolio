@@ -54,7 +54,7 @@ export default async function Services() {
           {/*______Text______*/}
           <div className="order-2 sm:order-1 m-8">
             {/* Pitch*/}
-            <motion.div className="rounded p-8 bg-lightBrown"
+            <motion.div className="rounded p-8 bg-lightBrown text-white"
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}>
@@ -122,7 +122,7 @@ export default async function Services() {
 
       {/*vvvvv Projects Carousel section vvvvv*/}
       <div className="project-overview-section my-8 p-2 sm:p-8 bg-lightBrown">
-        <h3 className="font-bold text-xl text-center pb-8">Mes projets</h3>
+        <h3 className="font-bold text-xl text-white text-center pb-8">Mes projets</h3>
 
         <div className="swiper-container mx-auto">
           
@@ -255,7 +255,7 @@ export default async function Services() {
       {/*vvvvv Contact vvvvv*/}
       <div className="m-8 mx-0 bg-lightBrown min-h-[10em] flex flex-col justify-center">
         <div className="flex flex-col sm:flex-row items-center justify-between">
-          <p className="sm:ml-[20%] ml-0 font-bold text-xl text-black mb-4 sm:mb-0">Discutons de vos besoins !</p>
+          <p className="sm:ml-[20%] ml-0 font-bold text-xl text-white mb-4 sm:mb-0">Discutons de vos besoins !</p>
 
           <div className="sm:mr-[20%] mr-0  flex justify-center">
             <Link href="/contact">
