@@ -48,7 +48,7 @@ const Footer = () => {
               </div>
 
               <div className="flex justify-center">
-                <p className="mt-4 text-center">Copyrights 2024 - Foin Developpement Web</p>
+                <p className="mt-4 text-center">Foin Developpement Web Copyrights 2024 - Tous droits réservés </p>
                 <p className="ml-12 mt-4 text-center">Sirene: 903257194</p>
               </div>
             </div>

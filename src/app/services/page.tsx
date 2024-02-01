@@ -61,19 +61,19 @@ export default async function Services() {
 
               <div>
                 <h3 className="font-bold text-xl">Je suis</h3>
-                <p>Nicolas Foin, ingénieur freelance en développemment web fullstack spécialisé en React.</p>
+                <p>Nicolas Foin, ingénieur freelance en développement web fullstack spécialisé en React.</p>
                 <br/>
               </div>
 
               <div>
                 <h3 className="font-bold text-xl">J'aide</h3>
-                <p>Les TPE / PME partout en France à développer leur visibitilité et leur activité en ligne, ainsi que les startups early stage qui ont besoins de prototypes pour tester leur marché rapidement.</p>
+                <p>Les TPE / PME partout en France à développer leur visibilité et leur activité en ligne, ainsi que les startups early stage qui ont besoin de prototypes pour tester leur marché rapidement.</p>
                 <br/>
               </div>
 
               <div>
                 <h3 className="font-bold text-xl">En offrant</h3>
-                <p>Des sites vitrines, ecommerce, et produit minimal viable d’applications web.</p>
+                <p>Des sites vitrine, e-commerce, et produit minimal viable d’applications web.</p>
                 <br/>
               </div>
 
@@ -103,13 +103,13 @@ export default async function Services() {
       {/*______Services______*/}
       <ExpandableSection title="Site vitrine">
         {/* Content for Section 1 */}
-        <p className="whitespace-pre-wrap">    Je crée des sites vitrine avec le CMS Wordpress pour gérer l'administration de données et le backend. Selon la personnalisation souhaitée et le budget, je peux réaliser la partie interface utilisateur avec React, ou bien avec l’editeur de thème Elementor.
+        <p className="whitespace-pre-wrap">    Je crée des sites vitrine avec le CMS Wordpress pour gérer l'administration de données et le backend. Selon la personnalisation souhaitée et le budget, je peux réaliser la partie interface utilisateur avec React, ou bien avec l’éditeur de thème Elementor.
         <br/>    Il me faut les maquettes graphiques de chaque page pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi-même sur Figma.</p>
       </ExpandableSection>
 
       <ExpandableSection title="E-commerce">
         {/* Content for Section 1 */}
-        <p className="whitespace-pre-wrap">    J’utilise Shopify pour créer les sites ecommerces. Selon votre budget, je peux créer l’interface utilisateur totalement personnalisée en React, ou bien utiliser l’éditeur de thème intégré à Shopify.
+        <p className="whitespace-pre-wrap">    J’utilise Shopify pour créer les sites ecommerce. Selon votre budget, je peux créer l’interface utilisateur totalement personnalisée en React, ou bien utiliser l’éditeur de thème intégré à Shopify.
         <br/>    Il me faut les maquettes graphiques de chaque page pour pouvoir commencer le projet. Si vous ne les avez pas, bien que je ne sois pas Designer, je peux faire les maquettes moi-même sur Figma.</p>
       </ExpandableSection>
 
