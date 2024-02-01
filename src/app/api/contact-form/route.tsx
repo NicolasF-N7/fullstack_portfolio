@@ -8,6 +8,7 @@ const mongodbPass = process.env.MONGODB_PASS;
 
 const saveDataToDb = async function(data : FormData){
 	const uri = "mongodb+srv://contact:" + mongodbPass + "@portfolio-contact-form.sludqiu.mongodb.net/?retryWrites=true&w=majority";
+	console.log(uri);
 	const client = new MongoClient(uri);
 
 	try {
@@ -44,6 +45,7 @@ export async function POST(req: NextRequest, res: NextApiResponse<FormData>) {
 		});
 		console.log(data.email +  " sent a form about '" + data.subject + "'");
 		await saveDataToDb(data);
+		consoole.log("Form registered to db")
 		return new Response(JSON.stringify({ message: 'Super ! J\'ai bien reçu le message. Je vous réponds très vite.' }), { status: 200, headers: { 'Content-Type': 'application/json' } });
 	}catch(err){
 		console.log(err);
