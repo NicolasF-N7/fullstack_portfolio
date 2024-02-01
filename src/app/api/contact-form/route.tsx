@@ -19,7 +19,9 @@ const saveDataToDb = async function(data : FormData){
 
     // Insert data into the collection
     const result = await collection.insertOne(data);
-  } finally {
+  }catch (err){
+  	console.log("Error while connecting to DB: " + err);
+  }finally {
     // Close the MongoDB connection
     await client.close();
   }
