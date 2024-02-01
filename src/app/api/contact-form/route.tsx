@@ -42,24 +42,22 @@ export async function POST(req: NextRequest, res: NextApiResponse<FormData>) {
 
 	
 	try{
+		/* SAVE FORM TO DB */
+		await saveDataToDb(data);
+		console.log("Form registered to db")
+
+
 		/* SEND EMAIL */
 		await transporter.sendMail({
 			...mailOptions,
 			subject: "Request from portfolio: \"" + data.subject + "\", from " + data.email,
 			text: data.message,
-
 		});
 		console.log(data.email +  " sent a form about '" + data.subject + "'");
 		
-		/* SAVE FORM TO DB */
-		await saveDataToDb(data);
-		console.log("Form registered to db")
 		return new Response(JSON.stringify({ message: 'Super ! J\'ai bien reçu le message. Je vous réponds très vite.' }), { status: 200, headers: { 'Content-Type': 'application/json' } });
 	}catch(err){
 		console.log(err);
 		return new Response(JSON.stringify({ message: 'Oh non ! Le message n\'est pas parti.' }), { status: 400, headers: { 'Content-Type': 'application/json' } });
 	}
-
-	
-
 };
