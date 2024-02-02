@@ -57,7 +57,7 @@ const Portfolio = () => {
 			        	}}>
 
 		            {portfolio_proj_data.map((project, index) => (
-		              <SwiperSlide className="bg-bluePrimary rounded portfolio-slides" key={`portfolio-project-${index}`}>
+		              <SwiperSlide className="bg-lightBrown rounded portfolio-slides" key={`portfolio-project-${index}`}>
 		                <PortfolioSlide project_data={project} />
 		              </SwiperSlide>
 		            ))}

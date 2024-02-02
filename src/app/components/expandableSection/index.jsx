@@ -26,8 +26,8 @@ const ExpandableSection = ({title, children}) => {
       <>
         <div className="p-8 px-8 sm:px-14">
           
-           <motion.div className={`flex-col border-t-2 border-b-2 border-bluePrimary 
-              transition-colors duration-200 ease-in-out ${isExpanded ? 'bg-expandedSection' : 'bg-sandSecondary'}`}
+           <motion.div className={`flex-col border-t-2 border-b-2 border-sunglow 
+              transition-colors duration-200 ease-in-out ${isExpanded ? 'bg-expandedSection' : 'bg-softSunglow'}`}
               whileHover={`bg-expandedSection`}>
             
             <button onClick={toggleExpand} className="w-full p-2">
@@ -37,7 +37,7 @@ const ExpandableSection = ({title, children}) => {
                   animate={{ rotate: isExpanded ? [0, 90] : [90,180,270,360] }}
                   whileHover={isExpanded ? {} : { rotate: 390 }}
                   transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-                  className="text-lightBrown text-xl font-bold"
+                  className="text-charcoal text-xl font-bold"
                 >
                   <IoIosArrowDroprightCircle size="1.5em" />
                 </motion.div>

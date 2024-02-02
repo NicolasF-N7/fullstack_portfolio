@@ -24,7 +24,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
 
           <div className=" flex">
             <Navigation />
-            <div className="main-content-container flex-1 bg-sandSecondary">
+            <div className="main-content-container flex-1 bg-pageBackground">
               {children}
             </div>
           </div>

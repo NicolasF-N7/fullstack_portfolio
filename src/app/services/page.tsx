@@ -54,7 +54,7 @@ export default async function Services() {
           {/*______Text______*/}
           <div className="order-2 sm:order-1 m-8">
             {/* Pitch*/}
-            <motion.div className="rounded p-8 bg-lightBrown text-white"
+            <motion.div className="rounded p-8 bg-sunglowBgSection text-black"
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}>
@@ -84,22 +84,6 @@ export default async function Services() {
         {/*^^^^^^^ Container Text & Picture ^^^^^^^*/}
       </div>
 
-      {/*vvvvvv Freelance vs Agency vvvvvvvv*/}
-      <div className="my-8 bg-bluePrimary">
-        <div className="p-8 px-16">
-          <h3 className="text-center font-bold text-xl">Freelance ou Agence digitale ?</h3>
-          <p className="mt-4 whitespace-pre-wrap">    Pour réaliser des projets complexes comme des applications web avec des problématiques de <span className="font-bold">passage à l'échelle</span>, ou des projets nécessitant une <span className="font-bold">solution web et mobile</span>, alors il vaut mieux faire appel à une agence digitale qui aura les ressources nécessaires.
-            <br/>Si vous voulez créer le concurrent d'Amazon effectivement, on n'est pas sûr d'arriver au bout avec une seule personne qui travaille dessus...
-            <br/>De manière générale, au plus un projet est complexe et nécessite des compétences à la fois diverse et poussées, au mieux une agence pourra vous aider.
-            </p>
-          <br/>
-          <p className="whitespace-pre-wrap">    Cependant, pour des projets de taille intermédiaire, un freelance aura l'avantage de proposer des <span className="font-bold">tarifs plus abordables</span> puisqu'il n'y a pas une équipe entière et différents niveau de management à rémunérer. Vous bénéficiez également d'une communication plus rapide <span className="font-bold">et d'une meilleure réactivité</span>, car il n'y a pas d'intermédiaire entre vous et la personne qui crée votre site.
-          De plus, les freelances sont souvent plus flexibles sur leur emploi du temps et peuvent donc vous offrir des <span className="font-bold">délais plus court </span>pour réaliser un projet.
-          </p>
-        </div>
-      </div>
-      {/*^^^^^^^ Freelance vs Agency ^^^^^^^*/}
-
       {/*______Services______*/}
       <ExpandableSection title="Site vitrine">
         {/* Content for Section 1 */}
@@ -109,7 +93,7 @@ export default async function Services() {
 
       <ExpandableSection title="E-commerce">
         {/* Content for Section 1 */}
-        <p className="whitespace-pre-wrap">J’utilise Shopify pour créer les sites ecommerce. Selon votre budget, je peux créer l’interface utilisateur totalement personnalisée en React, ou bien utiliser l’éditeur de thème intégré à Shopify.
+        <p className="whitespace-pre-wrap">J’utilise Shopify pour créer les sites e-commerce. Selon votre budget, je peux créer l’interface utilisateur totalement personnalisée en React, ou bien utiliser l’éditeur de thème intégré à Shopify.
         <br/></p>
       </ExpandableSection>
 
@@ -120,9 +104,28 @@ export default async function Services() {
       </ExpandableSection>
       {/*______Services______*/}
 
+      {/*vvvvv Contact vvvvv*/}
+      <div className="m-8 mx-0 bg-sunglow min-h-[10em] flex flex-col justify-center">
+        <div className="flex flex-col sm:flex-row items-center justify-between">
+          <p className="sm:ml-[20%] ml-0 font-bold text-xl text-black mb-4 sm:mb-0">Discutons de vos besoins !</p>
+
+          <div className="sm:mr-[20%] mr-0  flex justify-center">
+            <Link href="/contact">
+              <Button color="primary" className="px-16 py-6 border-softSunglow border-2" variant="solid" radius="none">
+                <div className="text-center text-softSunglow font-bold">
+                  <p>Contactez moi</p>
+                </div>
+              </Button>
+            </Link>
+          </div>
+
+        </div>
+      </div>
+      {/*^^^^^ Contact ^^^^^*/}
+
       {/*vvvvv Projects Carousel section vvvvv*/}
-      <div className="project-overview-section my-8 p-2 sm:p-8 bg-lightBrown">
-        <h3 className="font-bold text-xl text-white text-center pb-8">Mes projets</h3>
+      <div className="project-overview-section my-8 p-2 sm:p-8 bg-sunglowBgSection">
+        <h3 className="font-bold text-xl text-black text-center pb-8">Mes projets</h3>
 
         <div className="swiper-container mx-auto">
           
@@ -176,8 +179,8 @@ export default async function Services() {
         <div className="flex justify-center mt-8">
           
             <Link href="/portfolio">
-              <Button color="danger" className="px-16 py-6 border-sandSecondary border-2" variant="solid" radius="none">
-                <div className="text-center text-sandSecondary font-bold">
+              <Button color="primary" className="px-16 py-6 border-charcoal border-2" variant="bodered" radius="none">
+                <div className="text-center text-charcoal font-bold">
                   <p>Détails</p>
                 </div>
               </Button>
@@ -189,7 +192,7 @@ export default async function Services() {
 
 
       {/*vvvvv Tech skills vvvvv*/}
-      <div className="m-16 mx-0 bg-bluePrimary">
+      <div className="m-16 mx-0 bg-sunglow">
         <div className="flex-col p-8">
           <h2 className="text-xl font-bold text-center">Les technologies que je maitrise</h2>
 
@@ -252,28 +255,8 @@ export default async function Services() {
       {/*^^^^^ Tech skills ^^^^^*/}
 
 
-      {/*vvvvv Contact vvvvv*/}
-      <div className="m-8 mx-0 bg-lightBrown min-h-[10em] flex flex-col justify-center">
-        <div className="flex flex-col sm:flex-row items-center justify-between">
-          <p className="sm:ml-[20%] ml-0 font-bold text-xl text-white mb-4 sm:mb-0">Discutons de vos besoins !</p>
-
-          <div className="sm:mr-[20%] mr-0  flex justify-center">
-            <Link href="/contact">
-              <Button color="danger" className="px-16 py-6 border-sandSecondary border-2" variant="solid" radius="none">
-                <div className="text-center text-sandSecondary font-bold">
-                  <p>Contactez moi</p>
-                </div>
-              </Button>
-            </Link>
-          </div>
-
-        </div>
-      </div>
-      {/*^^^^^ Contact ^^^^^*/}
-
-
       {/*vvvvv Recommendations vvvvv*/}
-      <div className="m-16 mx-0 bg-bluePrimary">
+      <div className="m-16 mx-0 bg-sunglowBgSection">
         <div className="flex-col p-8">
           <h2 className="text-xl font-bold text-center">J'ai travaillé pour eux</h2>
 
@@ -308,7 +291,7 @@ export default async function Services() {
               {recommendations.map((recomm, index) => (
                 <SwiperSlide key={`recommendation-portrait-${index}`}>
 
-                  <div className="flex justify-center items-center rounded-tl-lg rounded-br-lg bg-expandedSection overflow-hidden">
+                  <div className="flex justify-center items-center rounded-tl-lg rounded-br-lg bg-charcoal bg-opacity-15 overflow-hidden">
                     
                       <Link className="mx-auto" target="_blank" href={recomm.linkedIn_profile}>
                         <div className="h-[12em] py-4">

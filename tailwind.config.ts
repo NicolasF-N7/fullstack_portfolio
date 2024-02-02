@@ -17,12 +17,17 @@ const config: Config = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        'bluePrimary': '#60C0B5',
-        'sandSecondary': '#FCE09B',
-        'redAccent': '#e8360e',
-        'brownTertiary': '#463715',
-        'lightBrown': '#816729',
-        'expandedSection': '#186F6531'
+        'pageBackground': '#fff9cb',
+        'lightBrown': '#fde18a',# TO DELETE
+        'expandedSection': '#A1C18171', # ALSO
+        'charcoal': '#233D4D',
+        'pumpkin': '#FE7F2D',
+        'sunglow': '#FCCA46',
+        'softSunglow': '#fff9cb',
+        'sunglowBgSection': '#fde18a',
+        'olivine': '#A1C181',
+        'zomp': '#619B8A',
+
     },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -36,10 +41,10 @@ const config: Config = {
         light: {
           colors: {
             default: {
-              DEFAULT: "#463715",
+              DEFAULT: "#FE7F2D",
             },
             primary: {
-              DEFAULT: "#816729",
+              DEFAULT: "#233D4D",
               foreground: "#000000",
             },
             secondary: {
@@ -51,11 +56,11 @@ const config: Config = {
               foreground: "#000000",
             },
             warning: {
-              DEFAULT: "#60C0B5",
+              DEFAULT: "#FCCA46",
               foreground: "#000000",
             },
             danger: {
-              DEFAULT: "#e8360e",
+              DEFAULT: "#ff9759",
               foreground: "#000000",
             },
             focus: "#BEF264",

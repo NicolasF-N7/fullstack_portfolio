@@ -9,7 +9,7 @@ import { socials } from '@/app/contact/social-networks'
 const Header = () => {
   return (
       <>
-        <header className="bg-bluePrimary text-black p-2 pl-16">
+        <header className="bg-sunglow text-black p-2 pl-16">
           <title>Portfolio - Nicolas Foin</title>
           <link rel="icon" href="/favicon.ico" />
           <div className="flex flex-row justify-between">

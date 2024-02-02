@@ -30,11 +30,6 @@ import islaPopularityScraperResult from '/public/images/projects_media/isla-popu
 import lbcExtractor from '/public/images/projects_media/lbc-price-extension/lbc-w720side.png'
 import lbcExtractorResult from '/public/images/projects_media/lbc-price-extension/result-small-w720.png'
 
-import servicesPortfolio from '/public/images/projects_media/portfolio/services-w720.png'
-import figmaPalettePortfolio from '/public/images/projects_media/portfolio/figma-palette-w720.png'
-import figmaScreensPortfolio from '/public/images/projects_media/portfolio/figma-screens-w720.png'
-
-
 /* 
 Structure of portfolio_proj_data:
 List of project
@@ -59,29 +54,6 @@ Mapping array to easily change projects order?
 
 
 export const portfolio_proj_data = [
-	{
-		title: "Mon Portfolio - Projet perso",
-		gist: "Mon portfolio pour présenter mes services de développement web",
-		proj_desc: "Ce site a été fait en typescript avec React-JS et Next-JS, et Tailwind-CSS pour le design de l'interface. Les animations sont faites grâce à Framer-Motion. La maquette pour l'interface utilisateur a été faite sous Figma.",
-		proj_desc: "Mon portfolio présente les services que j'offre en tant que freelance, les technologies que je maitrise, mon parcours, et biensur les projets sur lesquels j'ai travaillé par le passé.",
-		my_work: "J'ai fais ce site en typescript avec Next-JS sous React, et avec Tailwind-CSS pour le design. Les animations sont faites grâce à Framer-Motion. La maquette du design à été faite sous Figma.",
-		tech_stack: ["React-JS", "Tailwind-CSS", "Framer-Motion", "Figma"],
-		github: "https://github.com/NicolasF-N7/fullstack_portfolio",
-		screenshots: [
-			{
-				src: servicesPortfolio,
-				alt: "Service page of Nicolas's portfolio"
-			},
-			{
-				src: figmaPalettePortfolio,
-				alt: "Figma mock-up with color palette"
-			},
-			{
-				src: figmaScreensPortfolio,
-				alt: "Figma mock-up of portfolio pages"
-			},
-		]
-	},
 	{
 		title: "Festival de musique - Hestau",
 		gist: "Site de présentation du festival pour améliorer sa visibilité en ligne.",

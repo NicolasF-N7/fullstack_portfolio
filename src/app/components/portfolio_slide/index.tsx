@@ -50,22 +50,23 @@ const PortfolioSlide = ({project_data} : {project_data: ProjectDataType}) => {
 
               <div className="flex-1 pl-4 mt-4 self-center pb-[5%]">
 
-                <div className="py-4 px-8 pt-2 bg-expandedSection">
+                <div className="py-4 px-8 pt-2 bg-zomp">
                   <h2 className="text-center font-bold text-xl">Le projet</h2>
                   <p>{project_data.proj_desc}</p>
                 </div>
 
-                <div className="py-4 px-8 pt-2 my-[3vh] bg-expandedSection">
+                <div className="py-4 px-8 pt-2 my-[3vh] bg-zomp">
                   <h2 className="text-center font-bold text-xl">Les technologies utilisées</h2>
-                  <p>{project_data.my_work}</p> 
+                  <p>{project_data.my_work}</p>
                 </div>
                 
                 <div className="mt-6 flex flex-wrap items-start">
                   {project_data.tech_stack.map((techno, index) => (
-                    <span className="text-xs font-semibold p-2 rounded-md mr-2 mb-2 bg-lightBrown whitespace-no-wrap">{techno}</span>
+                    <span className="text-xs text-charcoal font-semibold p-2 rounded-md mr-2 mb-2 bg-olivine whitespace-no-wrap">{techno}</span>
                   ))}
 
-                  <div className="ml-auto transform hover:scale-110 transition-transform duration-300">
+
+                  {project_data.github && (<div className="ml-auto transform hover:scale-110 transition-transform duration-300">
                     <Link target="_blank" href={project_data.github}>
                       <Image
                         src={github_logo}
@@ -74,7 +75,7 @@ const PortfolioSlide = ({project_data} : {project_data: ProjectDataType}) => {
                         height={32}
                         className="object-contain"/>
                     </Link>
-                  </div>
+                  </div>)}
                 </div>
 
                 
