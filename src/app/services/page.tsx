@@ -196,7 +196,7 @@ export default async function Services() {
         <div className="flex justify-center mt-8">
           
             <Link href="/portfolio">
-              <Button color="primary" className="px-16 py-6 border-charcoal border-2" variant="bodered" radius="none">
+              <Button color="primary" className="px-16 py-6 border-charcoal border-2" variant="bordered" radius="none">
                 <div className="text-center text-charcoal font-bold">
                   <p>Détails</p>
                 </div>
