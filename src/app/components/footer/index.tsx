@@ -9,13 +9,13 @@ const Footer = () => {
 
   return (
       <>
-        <footer hidden={pathname === '/portfolio'} className="bg-sunglow text-black">
+        <footer hidden={pathname === '/portfolio'} className="bg-zomp text-black">
           <div className="p-12 pb-4">
             <div className="flex-col">
 
               <div className="flex flex-row justify-center underline">
-                <div className="flex flex-col sm:flex-row">
-                  <div className="mx-4 text-black mb-6 sm:mb-0">
+                <div className="flex flex-col md:flex-row">
+                  <div className="mx-4 text-black mb-6 md:mb-0">
                     <Link href="/services">Services</Link>
                   </div>
                   <div className="mx-4 text-black">
@@ -24,12 +24,12 @@ const Footer = () => {
                 </div>
 
 
-                <div className="mx-4 text-md sm:text-xl text-center text-black font-bold">
+                <div className="mx-4 text-md md:text-xl text-center text-black font-bold">
                   <Link href="/">Foin Developpement Web</Link>
                 </div>
 
-                <div className="flex flex-col sm:flex-row ">
-                  <div className="mx-4 text-black mb-6 sm:mb-0">
+                <div className="flex flex-col md:flex-row ">
+                  <div className="mx-4 text-black mb-6 md:mb-0">
                     <Link href="/about">About Nicolas</Link>
                   </div>
                   <div className="mx-4 text-black">

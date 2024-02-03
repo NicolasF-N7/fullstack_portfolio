@@ -140,7 +140,6 @@ body {
 
 .project-overview-section .swiper-pagination-bullet {
   margin-top: 50px;
-  background-color: theme('colors.softSunglow') !important;
 }
 .project-overview-section .el {
   margin-top: 50px;

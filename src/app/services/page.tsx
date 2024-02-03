@@ -11,10 +11,14 @@ import { recommendations } from '@/app/services/recommendations'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Pagination, Grid, A11y, Mousewheel } from 'swiper/modules';
 import { Button } from "@nextui-org/react";
-import LinkedInLogo from "/public/images/social_networks/LinkedIn_icon.svg"
+import LinkedInLogo from "/public/images/social_networks/linkedin-large.webp"
 import StorefrontIcon from "/public/images/misc-images/storefront-icon-256.png"
 import EcommerceIcon from "/public/images/misc-images/ecommerce.png"
 import WebappIcon from "/public/images/misc-images/webapp-256.png"
+import linkedin_logo from '/public/images/social_networks/linkedin.png'
+import github_logo from '/public/images/social_networks/github.png'
+import portrait from '/public/images/nicolas/nfoin_StationF_centered_compressed.jpg'
+import { socials } from '@/app/contact/social-networks'
 
 
 // Import Swiper styles
@@ -36,48 +40,75 @@ export default async function Services() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}>Mes Services</motion.h1>
       
-      <div className="ml-0 sm:ml-14">
+      <div className="ml-0 md:ml-14">
         {/*vvvvvv Container Text & Picture vvvvvvvv*/}
-        <div className="flex flex-col sm:flex-row">
+        <div className="flex flex-col md:flex-row">
           {/*______Picture______*/}
-          <motion.div className="order-1 sm:order-2 m-8 ml-16 sm:ml-0 mb-4 sm:mb-0"
+          <motion.div className="order-1 md:order-2 m-8 ml-16 md:ml-0 mb-4 md:mb-0"
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}  
             transition={{ duration: 0.5, ease: 'easeOut' }}>
             <Image
-                src="/images/nicolas/nfoin_StationF_centered_compressed.jpg"
+                src={portrait}
                 alt="Portrait of Nicolas Foin"
-                width="720"
-                height="480"
                 className="rounded"
               />
           </motion.div>
           {/*______Picture______*/}
 
           {/*______Text______*/}
-          <div className="order-2 sm:order-1 m-8">
+          <div className="order-2 md:order-1 m-8 mb-4">
             {/* Pitch*/}
-            <motion.div className="rounded p-8 bg-sunglowBgSection text-black"
+            <motion.div 
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}>
 
-              <div>
-                <h3 className="font-bold text-xl">Je suis</h3>
-                <p>Nicolas Foin, ingénieur freelance en développement web fullstack spécialisé en React.</p>
-                <br/>
+              <div className="rounded p-8 bg-sunglowBgSection text-black">
+                <div>
+                  <h3 className="font-bold text-xl">Je suis</h3>
+                  <p>Nicolas Foin, ingénieur freelance en développement web fullstack spécialisé en React.</p>
+                  <br/>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl">J'aide</h3>
+                  <p>Les TPE / PME partout en France à développer leur visibilité et leur activité en ligne, ainsi que les startups early stage qui ont besoin de prototypes pour tester leur marché rapidement.</p>
+                  <br/>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-xl">En offrant</h3>
+                  <p>Des sites vitrine, e-commerce, et produit minimal viable d’applications web.</p>
+                  <br/>
+                </div>
               </div>
 
-              <div>
-                <h3 className="font-bold text-xl">J'aide</h3>
-                <p>Les TPE / PME partout en France à développer leur visibilité et leur activité en ligne, ainsi que les startups early stage qui ont besoin de prototypes pour tester leur marché rapidement.</p>
-                <br/>
-              </div>
+              {/*Social network links*/}
+              <div className="flex flex-row justify-center mt-4">
+                <div 
+                  className="inline-block p-2 scale-80 transform hover:scale-100 transition-transform duration-300">
+                  <Link target="_blank" href={socials.linkedIn}>
+                    <Image
+                    src={linkedin_logo}
+                    alt="LinkedIn Icon"
+                    width={64}
+                    height={64}
+                    className="object-contain"/>
+                  </Link>
+                </div>
 
-              <div>
-                <h3 className="font-bold text-xl">En offrant</h3>
-                <p>Des sites vitrine, e-commerce, et produit minimal viable d’applications web.</p>
-                <br/>
+                <div 
+                  className="inline-block p-2 scale-80 transform hover:scale-100 transition-transform duration-300">
+                  <Link target="_blank" href={socials.github}>
+                    <Image
+                      src={github_logo}
+                      alt="Github Icon"
+                      width={64}
+                      height={64}
+                      className="object-contain"/>
+                  </Link>
+                </div>
               </div>
 
             </motion.div>
@@ -88,9 +119,9 @@ export default async function Services() {
       </div>
 
       {/*______Services______*/}
-      <div className="mt-16 flex flex-row justify-center px-16 py-8">
+      <div className="mt-4 flex flex-col md:flex-row justify-center md:px-8">
 
-        <div className="max-w-[33%] flex flex-col items-center mx-8 p-8 bg-softZomp border-t-2 border-b-2 border-sunglow">
+        <div className=" flex flex-col items-center m-4 p-8 bg-softZomp border-t-2 border-b-2 border-pumpkin">
           <h2 className="text-xl font-bold text-black mb-8">Site vitrine</h2>
           <Image
             className="mb-8"
@@ -99,7 +130,7 @@ export default async function Services() {
           <p className="whitespace-pre-wrap">Je crée des sites vitrine avec le CMS Wordpress pour gérer l'administration de données et le backend. Selon la personnalisation souhaitée et le budget, je peux réaliser la partie interface utilisateur avec React, ou bien avec l’éditeur de thème Elementor.</p>
         </div>
 
-        <div className="max-w-[33%] flex flex-col items-center mx-8 p-8 bg-softZomp border-t-2 border-b-2 border-sunglow">
+        <div className=" flex flex-col items-center m-4 p-8 bg-softZomp border-t-2 border-b-2 border-pumpkin">
         <h2 className="text-xl font-bold text-black mb-8">Site e-commerce</h2>
           <Image
               className="mb-8"
@@ -108,7 +139,7 @@ export default async function Services() {
           <p className="whitespace-pre-wrap">J’utilise Shopify pour créer les sites e-commerce. Selon votre budget, je peux créer l’interface utilisateur totalement personnalisée en React, ou bien utiliser l’éditeur de thème intégré à Shopify.</p>
         </div>
 
-        <div className="max-w-[33%] flex flex-col items-center mx-8 p-8 bg-softZomp border-t-2 border-b-2 border-sunglow">
+        <div className=" flex flex-col items-center m-4 p-8 bg-softZomp border-t-2 border-b-2 border-pumpkin">
         <h2 className="text-xl font-bold text-black mb-8">Application web</h2>
           <Image
             className="mb-8"
@@ -123,12 +154,12 @@ export default async function Services() {
 
       {/*vvvvv Contact vvvvv*/}
       <div className="m-8 mx-0 bg-sunglow min-h-[10em] flex flex-col justify-center">
-        <div className="flex flex-col sm:flex-row items-center justify-between">
-          <p className="sm:ml-[20%] ml-0 font-bold text-xl text-black mb-4 sm:mb-0">Discutons de vos besoins !</p>
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <p className="md:ml-[20%] ml-0 font-bold text-xl text-black mb-4 md:mb-0">Discutons de vos besoins !</p>
 
-          <div className="sm:mr-[20%] mr-0  flex justify-center">
+          <div className="md:mr-[20%] mr-0  flex justify-center">
             <Link href="/contact">
-              <Button color="primary" className="px-16 py-6 border-softSunglow border-2" variant="solid" radius="none">
+              <Button color="primary" className="px-16 py-6 border-pumpkin border-2" variant="solid" radius="none">
                 <div className="text-center text-softSunglow font-bold">
                   <p>Contactez moi</p>
                 </div>
@@ -141,10 +172,11 @@ export default async function Services() {
       {/*^^^^^ Contact ^^^^^*/}
 
       {/*vvvvv Projects Carousel section vvvvv*/}
-      <div className="project-overview-section my-8 p-2 sm:p-8 bg-sunglowBgSection">
+      <div className="project-overview-section my-8 p-2 md:p-8 bg-sunglowBgSection">
         <h3 className="font-bold text-xl text-black text-center pb-8">Mes projets</h3>
 
         <div className="swiper-container mx-auto">
+        {/*WHY NEED MX AUTO TO CENTER HERE?*/}
           
           <Swiper
             className="h-[28em]"
@@ -155,8 +187,11 @@ export default async function Services() {
               fill: 'row'
             }}
             breakpoints={{
-              768: {
+              1024: {
                 slidesPerView: 3,
+              },
+              768: {
+                slidesPerView: 2,
               },
               0: {
                 slidesPerView: 1,
@@ -196,8 +231,8 @@ export default async function Services() {
         <div className="flex justify-center mt-8">
           
             <Link href="/portfolio">
-              <Button color="primary" className="px-16 py-6 border-charcoal border-2" variant="bordered" radius="none">
-                <div className="text-center text-charcoal font-bold">
+              <Button color="primary" className="px-16 py-6 border-pumpkin border-2" variant="solid" radius="none">
+                <div className="text-center text-softSunglow font-bold">
                   <p>Détails</p>
                 </div>
               </Button>
