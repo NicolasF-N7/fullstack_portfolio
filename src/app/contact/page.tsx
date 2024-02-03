@@ -145,7 +145,7 @@ const Contact  = () => {
               {/*Success message*/}
               <div className={`${formSent ? '' : 'hidden'} relative my-16`}>
                 <h1 className="text-md font-bold text-punmpkin">{serverResponseText}</h1>
-                <div className="mt-4 absolute w-full h-1 bg-lightBrown"></div>
+                <div className="mt-4 absolute w-full h-1 bg-sunglowBgSection"></div>
               </div>
 
               {/*Error message*/}

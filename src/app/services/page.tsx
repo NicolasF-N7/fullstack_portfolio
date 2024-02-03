@@ -12,6 +12,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Pagination, Grid, A11y, Mousewheel } from 'swiper/modules';
 import { Button } from "@nextui-org/react";
 import LinkedInLogo from "/public/images/social_networks/LinkedIn_icon.svg"
+import StorefrontIcon from "/public/images/misc-images/storefront-icon-256.png"
+import EcommerceIcon from "/public/images/misc-images/ecommerce.png"
+import WebappIcon from "/public/images/misc-images/webapp-256.png"
 
 
 // Import Swiper styles
@@ -85,24 +88,38 @@ export default async function Services() {
       </div>
 
       {/*______Services______*/}
-      <ExpandableSection title="Site vitrine">
-        {/* Content for Section 1 */}
-        <p className="whitespace-pre-wrap">Je crée des sites vitrine avec le CMS Wordpress pour gérer l'administration de données et le backend. Selon la personnalisation souhaitée et le budget, je peux réaliser la partie interface utilisateur avec React, ou bien avec l’éditeur de thème Elementor.
-        <br/></p>
-      </ExpandableSection>
+      <div className="mt-16 flex flex-row justify-center px-16 py-8">
 
-      <ExpandableSection title="E-commerce">
-        {/* Content for Section 1 */}
-        <p className="whitespace-pre-wrap">J’utilise Shopify pour créer les sites e-commerce. Selon votre budget, je peux créer l’interface utilisateur totalement personnalisée en React, ou bien utiliser l’éditeur de thème intégré à Shopify.
-        <br/></p>
-      </ExpandableSection>
+        <div className="max-w-[33%] flex flex-col items-center mx-8 p-8 bg-softZomp border-t-2 border-b-2 border-sunglow">
+          <h2 className="text-xl font-bold text-black mb-8">Site vitrine</h2>
+          <Image
+            className="mb-8"
+            src={StorefrontIcon}
+            alt="Storefront service icon"/>
+          <p className="whitespace-pre-wrap">Je crée des sites vitrine avec le CMS Wordpress pour gérer l'administration de données et le backend. Selon la personnalisation souhaitée et le budget, je peux réaliser la partie interface utilisateur avec React, ou bien avec l’éditeur de thème Elementor.</p>
+        </div>
 
-      <ExpandableSection title="Application web">
-        {/* Content for Section 1 */}
-        <p className="whitespace-pre-wrap">Pour la création de SaaS et autres applications web nécessitant des fonctionnalités sur-mesures, j’utilise React pour faire l’interface utilisateur, et NodeJS pour créer un backend léger et rapide.
-        <br/></p>
-      </ExpandableSection>
+        <div className="max-w-[33%] flex flex-col items-center mx-8 p-8 bg-softZomp border-t-2 border-b-2 border-sunglow">
+        <h2 className="text-xl font-bold text-black mb-8">Site e-commerce</h2>
+          <Image
+              className="mb-8"
+              src={EcommerceIcon}
+              alt="Ecommerce service icon"/>
+          <p className="whitespace-pre-wrap">J’utilise Shopify pour créer les sites e-commerce. Selon votre budget, je peux créer l’interface utilisateur totalement personnalisée en React, ou bien utiliser l’éditeur de thème intégré à Shopify.</p>
+        </div>
+
+        <div className="max-w-[33%] flex flex-col items-center mx-8 p-8 bg-softZomp border-t-2 border-b-2 border-sunglow">
+        <h2 className="text-xl font-bold text-black mb-8">Application web</h2>
+          <Image
+            className="mb-8"
+            src={WebappIcon}
+            alt="Web app service icon"/>
+          <p className="whitespace-pre-wrap">Pour la création de SaaS et autres applications web nécessitant des fonctionnalités sur-mesures, j’utilise React pour faire l’interface utilisateur, et NodeJS pour créer un backend léger et rapide.</p>
+        </div>
+
+      </div>
       {/*______Services______*/}
+
 
       {/*vvvvv Contact vvvvv*/}
       <div className="m-8 mx-0 bg-sunglow min-h-[10em] flex flex-col justify-center">

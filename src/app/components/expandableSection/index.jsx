@@ -27,8 +27,8 @@ const ExpandableSection = ({title, children}) => {
         <div className="p-8 px-8 sm:px-14">
           
            <motion.div className={`flex-col border-t-2 border-b-2 border-sunglow 
-              transition-colors duration-200 ease-in-out ${isExpanded ? 'bg-expandedSection' : 'bg-softSunglow'}`}
-              whileHover={`bg-expandedSection`}>
+              transition-colors duration-200 ease-in-out ${isExpanded ? 'bg-olivine' : 'bg-softSunglow'}`}
+              whileHover={`bg-olivine`}>
             
             <button onClick={toggleExpand} className="w-full p-2">
               <div className="flex">

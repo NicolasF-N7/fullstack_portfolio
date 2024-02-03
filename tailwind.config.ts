@@ -17,17 +17,18 @@ const config: Config = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        'pageBackground': '#fff9cb',
-        'lightBrown': '#fde18a',# TO DELETE
-        'expandedSection': '#A1C18171', # ALSO
+        'pageBackgroundYellow': '#fff9cb',
+        'pageBackground': '#ffffff',
+        'expandedSection': '#A1C18171',
         'charcoal': '#233D4D',
         'pumpkin': '#FE7F2D',
         'sunglow': '#FCCA46',
         'softSunglow': '#fff9cb',
         'sunglowBgSection': '#fde18a',
         'olivine': '#A1C181',
+        'softOlivine': '#A1C18161',
         'zomp': '#619B8A',
-
+        'softZomp': '#619B8A61',
     },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

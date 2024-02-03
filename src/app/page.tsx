@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className="sm:ml-14 ml-10">
-      <div className="m-4 sm:m-8 p-8 text-black bg-expandedSection">
+      <div className="m-4 sm:m-8 p-8 text-black bg-olivine">
         <div className="text-center">
           <h1 className="font-bold">Vous êtes sur le portfolio de Nicolas Foin, freelance en développement web fullstack, spécialisé en React.</h1>
         </div>

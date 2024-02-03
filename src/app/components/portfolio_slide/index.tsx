@@ -50,12 +50,12 @@ const PortfolioSlide = ({project_data} : {project_data: ProjectDataType}) => {
 
               <div className="flex-1 pl-4 mt-4 self-center pb-[5%]">
 
-                <div className="py-4 px-8 pt-2 bg-zomp">
+                <div className="py-4 px-8 pt-2 bg-softZomp text-black">
                   <h2 className="text-center font-bold text-xl">Le projet</h2>
                   <p>{project_data.proj_desc}</p>
                 </div>
 
-                <div className="py-4 px-8 pt-2 my-[3vh] bg-zomp">
+                <div className="py-4 px-8 pt-2 my-[3vh] bg-softZomp text-black">
                   <h2 className="text-center font-bold text-xl">Les technologies utilisées</h2>
                   <p>{project_data.my_work}</p>
                 </div>
