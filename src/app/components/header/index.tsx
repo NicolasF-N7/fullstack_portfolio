@@ -9,8 +9,8 @@ const Header = () => {
         <header className="bg-sunglow text-black p-2 pl-16">
           <title>Portfolio - Nicolas Foin</title>
           <link rel="icon" href="/favicon.ico" />
-          <meta name="google-adsense-account" content="ca-pub-2850313560784722">
-
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2850313560784722"
+            crossOrigin="anonymous"></script>
           <div className="flex flex-row justify-between">
             {/* Logo */}
             <div className="text-xl pt-2 text-black font-bold">
